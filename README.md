@@ -2,6 +2,13 @@
 
 __What is Flatlight?__
 
+
+A powerful light, that nicely fits into your pockets because it's flat like a phone ;)
+
+Rechargeable - Temperaturcontrolled - Magnetic - Versatile
+
+
+
 When the Phone of a friend died there was a lipo left, from installing lights for someone 
 there were some LED Strips left - i found a small switch in a box, i had a soldering iron and some wires.
 
@@ -9,14 +16,14 @@ Thats how it started... but it has grown.
 
 This Project is intended for educational and private use.
 
-A powerful light, that nicely fits into your pockets because it's flat like a phone ;)
-
-Rechargeable - Temperaturcontrolled - Magnetic - Versatile
-
 It's Modular Design allows for the LED side or the µController side to be exchanged quickly and easily.
 The Battery is commonly available and exchangeable.
 
-Personally I build the complete Flatlight myself, from bare copper PCB to the finished device, including printing the transparencys, exposing, developing, etching, cleaning, filing, placing the components and toasting the board on my gas stove.
+I designed Flatlight myself, searching for circuits online, creating the schematics and layout with KiCAD.
+I  built a few prototypes from bare copper PCB to the finished device, including printing the transparencys, exposing, developing, etching, cleaning, filing, placing the components and toasting the board on my gas stove.
+
+I got a lot of positive feedback from everyone, so I thought its time to share ! :)
+
 For more information take a look at my youtube channel, the link is down below.
 
 
@@ -59,7 +66,8 @@ __Something by the Way__
 - The build Time from the point where i have printed transparencys to the point where im ready to pour epoxy on everything is around 6 Hours when completely building the PCB at home. (etching and so on)
 - If you want a Flatlight but do not have the tools or material to make one I might build one for you if you like just leave me a message.
 
-HAVE FUN !!!!
+Thanks to everyone who supported me  !!!
 
+HAVE FUN !!!
 
 -Nico
