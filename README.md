@@ -29,7 +29,7 @@ The Arduino Programm is for the Flatlight .
 
 <B>The Software is Licensed under the GNU Public License 3.0, please include that in your Code</B>
 
-<B> The Hardware is Licensed under CC-BY-SA 4.0 please include this on your Silkscreen or TopCopper</B>
+<B> The Hardware is Licensed under CC-BY-SA 4.0 please include this on your Silkscreen or Top/Bottom Copper Layer</B>
 
 Both Licenses can be found in the docs folder
 
@@ -39,4 +39,4 @@ HAVE FUN !!!
 
 -Nico
 
-PS: thanks and credits to cpldcpu for the nice tiny library which i forked here to adapt it to sk6812 RGBW LEDs!
+PS: Thanks and credits to cpldcpu for the nice tiny library which i forked here to adapt it to sk6812 RGBW LEDs!
