@@ -17,28 +17,21 @@ I got a lot of positive feedback from everyone, so I thought its time to share !
 __Building the Flatlight__
 
 You should find everything you need in the KiCAD Folder to get started Hardwarewise.
-I tried my best to add Comments in the Schematics. 
-There is also a Sample Layout file which you may use and modify.
-Also there are ready made SVGs so you can just print your transparency and start etching.
-You might wanna take a look how to build a Flatlight on my youtube channel.
 
-<B> The Hardware is Licensed under CC-BY-SA 4.0 please include this on your Silkscreen or TopCopper</B>
-
-Both Licenses can be foud in the docs folder
 
 
 __Code for the Flatlight__
 
 It started out as a C++ Project in Eclipse, but i found that pretty difficult to set up and handle, so i switched to arduino.
-The Arduino Programm is for the Flatlight with an ATMega 8 µController. The Software and Hardware in this Project fit together, if you modify your layout or the PINs in the Schematic, make sure to adapt the Code to that changes.
-When I have the Hardware in my hands i usually hook it to a USB ISP, in my case an USBASP v2.0 and:
+The Arduino Programm is for the Flatlight . 
 
-- Set the fuses on a new ATMega chip. (help is in the docs)
-- Use the programmer and ISP of your Choice, i usually export as HEX file and flash with avrdude.
+
 
 <B>The Software is Licensed under the GNU Public License 3.0, please include that in your Code</B>
 
-Both Licenses can be foud in the docs folder
+<B> The Hardware is Licensed under CC-BY-SA 4.0 please include this on your Silkscreen or TopCopper</B>
+
+Both Licenses can be found in the docs folder
 
 Thanks to everyone who supported me  !!!
 
@@ -46,4 +39,4 @@ HAVE FUN !!!
 
 -Nico
 
-PS: thanks and credits to cpldcpu for the nice tiny library !
+PS: thanks and credits to cpldcpu for the nice tiny library which i forked here to adapt it to sk6812 RGBW LEDs!
