@@ -47,18 +47,18 @@ const int templed = 22;
 #define LEDCount 48
 #define outputPin 13
 
-static ProLibMain proLib;
+ProLibMain proLib;
 WS2812 PIXEL(LEDCount);
 cRGB value;
 
 /*// calculate temp in °C from ntc (just to make the values clearer(for me))
-double Thermistor(int RawADC) {
+  double Thermistor(int RawADC) {
   double Temp;
   Temp = log(10000.0 * ((1024.0 / RawADC - 1)));
   Temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 * Temp * Temp )) * Temp );
   Temp = Temp - 273.15;
   return Temp;
-}*/
+  }*/
 
 
 //  check supply voltage
@@ -97,35 +97,42 @@ void setup() {
 
   PIXEL.setOutput(outputPin);
   PIXEL.setColorOrderGRB(); // for sk6812 rgbw pixel
-  digitalWrite(RED, 1); // For Debugging
-  ProLibMain proLib = ProLibMain::getInstance();
-  digitalWrite(ORANGE, 1);  // For Debugging
   //Battery Check on Startup
   BATcheck();
-  delay(2000);
+  delay(1500);
   BATclear();
+  digitalWrite(RED, 1); // For Debugging
 }
 
 
 // start main loop
 void loop() {
   // read and store temp
-  ADMUX = _BV(REFS0) |_BV(REFS1);
+  ADMUX = _BV(REFS0) | _BV(REFS1);
   proLib.proTemperature();
   // Button routine
-  while(1){
-    proLib.proButtons();
+  bool batteryCheck = proLib.proButtons();
+  proLib.proLibMainLoop();
+
+  if(batteryCheck)
+  {
+    BATcheck();
+  }
+  else
+  {
+    BATclear();
   }
 
+  
   /*int reading = digitalRead(button);
 
-  //button first pressed
-  if (reading == HIGH && lastReading == LOW) {
+    //button first pressed
+    if (reading == HIGH && lastReading == LOW) {
     onTime = millis();
-  }
+    }
 
-  //button held (as long as held switch all other LEDs off to get a real VCC value to read out.. no drag)
-  if (reading == HIGH && lastReading == HIGH) {
+    //button held (as long as held switch all other LEDs off to get a real VCC value to read out.. no drag)
+    if (reading == HIGH && lastReading == HIGH) {
     if ((millis() - onTime) > holdTime) {
 
 
@@ -135,11 +142,11 @@ void loop() {
 
       hold = 1;
     }
-  }
+    }
 
-  // button released (is it ?)
+    // button released (is it ?)
 
-  if (reading == LOW && lastReading == HIGH) {
+    if (reading == LOW && lastReading == HIGH) {
     if (((millis() - onTime) > bounceTime) && hold != 1) {
       onRelease();
     }
@@ -151,32 +158,32 @@ void loop() {
 
       hold = 0;
     }
-  }
+    }
 
-  lastReading = reading;
+    lastReading = reading;
 
-  if (single == 1 && (millis() - lastSwitchTime) > doubleTime) {
+    if (single == 1 && (millis() - lastSwitchTime) > doubleTime) {
 
     // button single click (set matrix brightness)
 
     LEDSTATE();
     single = 0;
-  }
+    }
 
-  //BUTTON ROUTINE END
-  // *******
-  // XBUTTON ROUTINE START
+    //BUTTON ROUTINE END
+    // *******
+    // XBUTTON ROUTINE START
 
 
-  int xreading = digitalRead(xbutton);
+    int xreading = digitalRead(xbutton);
 
-  //button first pressed
-  if (xreading == HIGH && xlastReading == LOW) {
+    //button first pressed
+    if (xreading == HIGH && xlastReading == LOW) {
     xonTime = millis();
-  }
+    }
 
-  //button held
-  if (xreading == HIGH && xlastReading == HIGH) {
+    //button held
+    if (xreading == HIGH && xlastReading == HIGH) {
     if ((millis() - xonTime) > xholdTime) {
 
       blank();
@@ -185,11 +192,11 @@ void loop() {
 
       xhold = 1;
     }
-  }
+    }
 
-  // button released (is it ?)
+    // button released (is it ?)
 
-  if (xreading == LOW && xlastReading == HIGH) {
+    if (xreading == LOW && xlastReading == HIGH) {
     if (((millis() - xonTime) > xbounceTime) && xhold != 1) {
       xonRelease();
     }
@@ -201,17 +208,18 @@ void loop() {
 
       xhold = 0;
     }
-  }
+    }
 
-  xlastReading = xreading;
+    xlastReading = xreading;
 
-  if (xsingle == 1 && (millis() - xlastSwitchTime) > xdoubleTime) {
+    if (xsingle == 1 && (millis() - xlastSwitchTime) > xdoubleTime) {
 
     // button single click (set brightness XLED)
 
     XLEDSTATE();
     xsingle = 0;
-  }*/
+    }*/
+
 }
 
 // Xroutine END
@@ -368,15 +376,15 @@ void LEDMODE() {
         PIXEL.set_crgb_at(i, value);
         i++;
       }
-    }
-    PIXEL.sync();
-  }
+      }
+      PIXEL.sync();
+      }
 
-  else if (lightMode == 5) {
+      else if (lightMode == 5) {
 
-    // smile !
+      // smile !
 
-    for (uint16_t i = 0; i < LEDCount; i++) {
+      for (uint16_t i = 0; i < LEDCount; i++) {
       for (uint16_t x = 0; x < 160; x++) {
         value.b = smiley[x];
         x++;
@@ -386,8 +394,8 @@ void LEDMODE() {
         PIXEL.set_crgb_at(i, value);
         i++;
       }
-    }
-    PIXEL.sync();*/
+      }
+      PIXEL.sync();*/
   }
 }
 

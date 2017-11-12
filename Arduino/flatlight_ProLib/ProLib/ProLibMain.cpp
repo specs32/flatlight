@@ -1,6 +1,7 @@
 #include "ProLibMain.h"
 #include <stdlib.h>
 #include <math.h>
+#include "Sketches.h"
 
 // define PINS and other variables
 
@@ -32,9 +33,9 @@ int xpreviousLEDstate = 8;       // set previous ledstate
 
 long steps = 0;                  // value for smooth fading*/
 
-#ifndef xbutton
-#define xbutton 8          // define the other button pin ^^
-#define button 9		        // define button pin
+#ifndef BUTTON_SUN
+#define BUTTON_SUN 8          // define the other button pin ^^
+#define BUTTON_MOON 9		        // define button pin
 #define xled = 12;                // Cree (X)LEDs
 #define RED 17               // Battery Indicator Pin
 #define ORANGE 18            // Battery Indicator Pin
@@ -43,65 +44,51 @@ long steps = 0;                  // value for smooth fading*/
 #define BRIGHTGREEN 21       // Battery Indicator Pin
 #define templed 22
 
-#define LEDCount 48
-#define outputPin 13
+#define LED_COUNT 48
+#define LED_MATRIX_OUTPUT_PIN 13
+#define LED_LIGHT_MODES 6
 
 #define BOUNCE_TIME 50
 #define HOLD_TIME 250
+#define DOUBLE_CLICK_TIME 500
 
 #endif
 
 
 ProLibMain::ProLibMain() 
-	: Pixel(WS2812(LEDCount)),
-	buttonMng(ButtonManager())
+	:	buttonMng(ButtonManager()),
+	ledMatrix(LED_COUNT, LED_MATRIX_OUTPUT_PIN),
+	curFrame()
 {
 	tempMng = TemperatureManager::getInstance();
 
-	pinMode(button, INPUT);
-	pinMode(xbutton, INPUT);
+	pinMode(BUTTON_MOON, INPUT);
+	pinMode(BUTTON_SUN, INPUT);
 	pinMode(templed, OUTPUT);
 	pinMode(RED, OUTPUT);
 	pinMode(ORANGE, OUTPUT);
 	pinMode(YELLOW, OUTPUT);
 	pinMode(GREEN, OUTPUT);
 	pinMode(BRIGHTGREEN, OUTPUT);
-	Pixel.setOutput(outputPin);
 
-	buttonMng.addButton(xbutton);
-	buttonMng.addButton(button);
 
-	Pixel.setColorOrderGRB(); // for sk6812 rgbw pixel
-
-	// Setting the Pixel to 0,0,0;
-	cRGB rgbValue;
-	rgbValue.r = 00;
-	rgbValue.g = 00;
-	rgbValue.b = 00;
-	for (int i = 0; i < LEDCount; i++)
-	{
-		Pixel.set_crgb_at(i, rgbValue);
-	}
+	buttonMng.addButton(BUTTON_SUN);
+	buttonMng.addButton(BUTTON_MOON);
 }
 
-ProLibMain& ProLibMain::getInstance()
+/*ProLibMain& ProLibMain::getInstance()
 {
 	static ProLibMain instance;
 	return instance;
-}
+}*/
 
 void ProLibMain::proLibMainLoop()
 {
-	static int c;
-	c++;
-	c %= 100;
-	cRGB rgbValue;
-	rgbValue.r = c;
-	rgbValue.g = 0;
-	rgbValue.b = 25;
-	Pixel.set_crgb_at(1, rgbValue);
-
-	Pixel.sync();
+	if(frameChanged)
+	{
+		ledMatrix.setFrame(&curFrame);
+		frameChanged = false;
+	}
 }
 
 void ProLibMain::proTemperature()
@@ -165,12 +152,13 @@ void ProLibMain::proTemperature()
 	
 }
 
-void ProLibMain::proButtons()
+bool ProLibMain::proButtons()
 {
+	bool batteryCheck = false;
 
 	//ButtonManager buttonMng2 = ButtonManager::getInstance();
-	buttonMng.addButton(xbutton);
-	buttonMng.addButton(button);
+	buttonMng.addButton(BUTTON_SUN);
+	buttonMng.addButton(BUTTON_MOON);
 	
 	int buttonStatus[2] = {0,0};
 	long buttonTime[2] = { 0,0 };
@@ -178,95 +166,139 @@ void ProLibMain::proButtons()
 	buttonMng.readButtons(buttonStatus,buttonTime);
 	// Reads in the Button Status (NotPressed = 0, Pressed = 1, Hold = 2, Released =3) and the Time since the last Press/Release
 
-	// Button 0 is xbutton 1 is button
-	// if xButton is Pressed (and we are sure it is no bounce)
-	/*if (buttonStatus[0] == 0)
-	{
-		digitalWrite(BRIGHTGREEN, 1);
-	}
-	else
-	{
-		digitalWrite(BRIGHTGREEN, 0);
-	}
-	if (buttonStatus[0] == 1)
-	{
-		digitalWrite(GREEN, 1);
-		delay(500);
-	}
-	else
-	{
-		digitalWrite(GREEN, 0);
-	}
-	if (buttonStatus[0] == 2)
-	{
-		digitalWrite(YELLOW, 1);
-	}
-	else
-	{
-		digitalWrite(YELLOW, 0);
-	}
-	if (buttonStatus[0] == 3)
-	{
-		digitalWrite(ORANGE, 1);
-		delay(500);
-	}
-	else
-	{
-		digitalWrite(ORANGE, 0);
-	}
-	if (buttonStatus[0] == 4)
-	{
-		digitalWrite(RED, 1);
-	}
-	else
-	{
-		digitalWrite(RED, 0);
-	}*/
+	// Button 0 is BUTTON_SUN 1 is BUTTON_MOON
+	// if BUTTON_SUN is Pressed (and we are sure it is no bounce)
 	if(buttonStatus[0] == 1 && buttonTime[0] > BOUNCE_TIME)
 	{
-		digitalWrite(GREEN, 1);
+		//digitalWrite(GREEN, 1);
 		
 	}
 	// when it is hold long enough
 	else if (buttonStatus[0] == 2 && buttonTime[0] > HOLD_TIME)
 	{
-		digitalWrite(YELLOW, 1);
+		//digitalWrite(YELLOW, 1);
 		
 	}
 	// when it is released after Holding
 	else if (buttonStatus[0] == 3 && buttonTime[0] > HOLD_TIME)
 	{
-		digitalWrite(ORANGE, 1);
+		//digitalWrite(ORANGE, 1);
 		
 	}
 	// when it is released without Holding
 	else if (buttonStatus[0] == 3 && buttonTime[0] < HOLD_TIME && buttonTime[0] > BOUNCE_TIME)
 	{
-		digitalWrite(RED, 1);
-		
+		//digitalWrite(RED, 1);
 	}
-	// The same for Button press
+	static long lastTimeClicked = 0;
+	static uint8_t lightMode = 0;
+	static bool off = false;
+	// The same for BUTTON_MOON press
 	if (buttonStatus[1] == 1 && buttonTime[1] > BOUNCE_TIME)
 	{
-
+		// Switch the light Mode when double Clicked
+		if (millis() - lastTimeClicked < DOUBLE_CLICK_TIME)
+		{
+			off = false;
+			lightMode++;
+			lightMode %= LED_LIGHT_MODES;
+			// we dont want a triple click as double click
+			lastTimeClicked = 0;
+		}
+		else
+		{
+			lastTimeClicked = millis();
+		}
 	}
 	// hold
 	else if (buttonStatus[1] == 2 && buttonTime[1] > HOLD_TIME)
 	{
-		digitalWrite(RED, 0);
-		digitalWrite(GREEN, 0);
-		digitalWrite(YELLOW, 0);
-		digitalWrite(ORANGE, 0);
+		batteryCheck = true;
 	}
 	// hold release
-	else if (buttonStatus[1] == 2 && buttonTime[1] > HOLD_TIME)
+	else if (buttonStatus[1] == 3 && buttonTime[1] > HOLD_TIME)
 	{
 
 	}
 	// not hold release
-	else if (buttonStatus[1] == 2 && buttonTime[1] < HOLD_TIME && buttonTime[1] > BOUNCE_TIME)
+	else if (buttonStatus[1] == 3 && buttonTime[1] < HOLD_TIME && buttonTime[1] > BOUNCE_TIME)
 	{
+		uint8_t shapeMatrix[8][6];
+		frameChanged = true;
 
+		// if it is off turn the lights off
+		if (off)
+		{
+			RGBColor colors[] = { RGBColor(0,0,0) };
+			Sketches::getSketch(shapeMatrix, Shapes::Filled);
+			curFrame = Frame(shapeMatrix, colors, sizeof(colors));
+			lastTimeClicked = millis();
+		}
+		else 
+		{
+			switch (lightMode)
+			{
+			/*case 0:
+				{
+					RGBColor colors[] = { RGBColor(0,0,0) };
+					Sketches::getSketch(shapeMatrix, Shapes::Filled);
+					curFrame = Frame(shapeMatrix, colors, sizeof(colors));
+					break;
+				}*/
+			case 0:
+				{
+					RGBColor colors[] = { RGBColor(100,100,100) };
+					Sketches::getSketch(shapeMatrix, Shapes::Filled);
+					curFrame = Frame(shapeMatrix, colors, sizeof(colors));
+					break;
+				}
+			case 1:
+				{	
+					RGBColor colors[] = { RGBColor(100,0,0) };
+					Sketches::getSketch(shapeMatrix, Shapes::Filled);
+					curFrame = Frame(shapeMatrix, colors, sizeof(colors));
+					break;
+				}
+			case 2:
+				{
+					RGBColor colors[] = { RGBColor(0,100,0) };
+					Sketches::getSketch(shapeMatrix, Shapes::Filled);
+					curFrame = Frame(shapeMatrix, colors, sizeof(colors));
+					break;
+				}
+			case 3:
+				{
+					RGBColor colors[] = { RGBColor(0,0,100) };
+					Sketches::getSketch(shapeMatrix, Shapes::Filled);
+					curFrame = Frame(shapeMatrix, colors, sizeof(colors));
+					break;
+				}
+			case 4:
+				{
+					RGBColor colors[] = { RGBColor(0,0,0),RGBColor(100,0,25) };
+					Sketches::getSketch(shapeMatrix, Shapes::Hearth);
+					curFrame = Frame(shapeMatrix, colors, sizeof(colors));
+					break;
+				}
+			case 5:
+				{
+					RGBColor colors[] = { RGBColor(0,0,0),RGBColor(20,20,0),RGBColor(20,20,20),RGBColor(40,0,0) };
+					Sketches::getSketch(shapeMatrix, Shapes::Smiley);
+					curFrame = Frame(shapeMatrix, colors, sizeof(colors));
+					break;
+				}
+			default:
+				{
+					RGBColor colors[] = { RGBColor(100,100,100) };
+					Sketches::getSketch(shapeMatrix, Shapes::Filled);
+					curFrame = Frame(shapeMatrix, colors, sizeof(colors));
+					break;
+				}
+			}
+		}
+		// Switch on/off
+		off = !off;
 	}
 
+	return batteryCheck;
 }

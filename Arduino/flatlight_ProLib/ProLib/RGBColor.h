@@ -1,15 +1,16 @@
 #pragma once
+#include <stdint.h>
 
 class RGBColor {
 public:
-	RGBColor(int r, int g, int b);
+	RGBColor(uint8_t r, uint8_t g, uint8_t b);
 	RGBColor();
 	//RGBColor(const RGBColor& other);
-	int getR();
-	int getG();
-	int getB();
+	uint8_t getR();
+	uint8_t getG();
+	uint8_t getB();
 private:
-	int r, g, b;
+	uint8_t r, g, b;
 
 
 };

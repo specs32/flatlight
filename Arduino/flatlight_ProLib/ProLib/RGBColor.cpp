@@ -1,7 +1,7 @@
 #include "RGBColor.h"
 
 
-RGBColor::RGBColor(int r, int g, int b) {
+RGBColor::RGBColor(uint8_t r, uint8_t g, uint8_t b) {
 	this->r = r;
 	this->g = g;
 	this->b = b;
@@ -11,12 +11,12 @@ RGBColor::RGBColor() {
 	g = 0;
 	b = 0;
 }
-int RGBColor::getR() {
+uint8_t RGBColor::getR() {
 	return r;
 }
-int RGBColor::getG() {
+uint8_t RGBColor::getG() {
 	return g;
 }
-int RGBColor::getB() {
+uint8_t RGBColor::getB() {
 	return b;
 }

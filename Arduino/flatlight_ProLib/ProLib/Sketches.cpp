@@ -1,10 +1,30 @@
 #include "Sketches.h"
 
-void Sketches::getSketch(int toBeFilledMatrix[8][6], Shapes shape)
+void Sketches::getSketch(uint8_t toBeFilledMatrix[8][6], Shapes shape)
 {
-	if(shape == Hearth)
+	if (shape == Filled)
 	{
-		int toBeFilledMatrix2[8][6] = {
+		uint8_t shapeMatrix[8][6] = {
+			{ 0,0,0,0,0,0 },
+			{ 0,0,0,0,0,0 },
+			{ 0,0,0,0,0,0 },
+			{ 0,0,0,0,0,0 },
+			{ 0,0,0,0,0,0 },
+			{ 0,0,0,0,0,0 },
+			{ 0,0,0,0,0,0 },
+			{ 0,0,0,0,0,0 }
+		};
+		for (int i = 0; i < 8; i++)
+		{
+			for (int j = 0; j < 6; j++)
+			{
+				toBeFilledMatrix[i][j] = shapeMatrix[i][j];
+			}
+		}
+	}
+	else if(shape == Hearth)
+	{
+		uint8_t shapeMatrix[8][6] = {
 			{0,0,0,1,1,0},
 			{0,0,1,1,1,1},
 			{0,1,1,1,1,1},
@@ -14,10 +34,18 @@ void Sketches::getSketch(int toBeFilledMatrix[8][6], Shapes shape)
 			{0,0,0,1,1,0},
 			{0,0,0,0,0,0}
 		};
+		for (int i = 0; i < 8; i++)
+		{
+			for (int j = 0; j < 6; j++)
+			{
+				toBeFilledMatrix[i][j] = shapeMatrix[i][j];
+			}
+		}
+		
 	}
-	if (shape == Smiley)
+	else if (shape == Smiley)
 	{
-		int toBeFilledMatrix2[8][6] = {
+		uint8_t shapeMatrix[8][6] = {
 			{ 0,1,1,1,1,0 },
 			{ 1,1,1,1,1,1 },
 			{ 1,2,1,1,2,1 },
@@ -27,6 +55,13 @@ void Sketches::getSketch(int toBeFilledMatrix[8][6], Shapes shape)
 			{ 1,1,1,1,1,1 },
 			{ 0,1,1,1,1,0 }
 		};
+		for (int i = 0; i < 8; i++)
+		{
+			for (int j = 0; j < 6; j++)
+			{
+				toBeFilledMatrix[i][j] = shapeMatrix[i][j];
+			}
+		}
 	}
 }
 

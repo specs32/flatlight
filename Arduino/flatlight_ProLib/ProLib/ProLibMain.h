@@ -5,23 +5,23 @@
 //#else
 //toobad
 //#endif
-#include "WS2812.h"
 #include "TemperatureManager.h"
 #include "ButtonManager.h"
-
-#define LEDCount 48
+#include "WS2812Matrix.h"
 
 class ProLibMain
 {
 public:
-	ProLibMain();	// Singleton
+	ProLibMain();
 public:
-	static ProLibMain& getInstance();
+	//static ProLibMain& getInstance();
 	void proLibMainLoop();
 	void proTemperature();
-	void proButtons();
+	bool proButtons();
 private:
-	WS2812 Pixel;
+	WS2812Matrix ledMatrix;
+	Frame curFrame;
+	boolean frameChanged = false;
 	static TemperatureManager tempMng;
 	ButtonManager buttonMng;
 };

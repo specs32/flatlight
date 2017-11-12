@@ -1,6 +1,9 @@
 #pragma once
+#include <stdint.h>
+
 enum Shapes
 {
+	Filled,
 	Hearth,
 	Smiley
 };
@@ -8,5 +11,5 @@ enum Shapes
 class Sketches
 {
 public:
-	static void getSketch(int toBeFilledMatrix[8][6], Shapes shape);
+	static void getSketch(uint8_t toBeFilledMatrix[8][6], Shapes shape);
 };
