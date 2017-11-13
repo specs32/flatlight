@@ -96,7 +96,7 @@ void setup() {
 
 
   PIXEL.setOutput(outputPin);
-  PIXEL.setColorOrderGRB(); // for sk6812 rgbw pixel
+  PIXEL.setColorOrderGRB(); // for sk6812 rgbw pixel (<-delete this comment, its from an older experiment with SK6812 LEDS)
   //Battery Check on Startup
   BATcheck();
   delay(1500);
