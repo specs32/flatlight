@@ -1,0 +1,25 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ATMEGA32U4-RC-MU
+D QFN44, 16K Flash, 1.25K SRAM, 512B EEPROM, USB2.0
+K AVR 8bit Microcontroller MegaAVR USB
+F http://www.atmel.com/images/atmel-7766-8-bit-avr-atmega16u4-32u4_%20datasheet.pdf
+$ENDCMP
+#
+$CMP ATMEGA32U4RC-MU
+D QFN44, 32K Flash, 2.5K SRAM, 1K EEPROM, USB2.0
+K AVR 8bit Microcontroller MegaAVR USB
+F http://www.atmel.com/images/atmel-7766-8-bit-avr-atmega16u4-32u4_%20datasheet.pdf
+$ENDCMP
+#
+$CMP DMN1004UFDF
+D 50V Vds, 0.22 A Id, N-channel MOSFET, SOT-23
+K N-Channel MOSFET
+F https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf
+$ENDCMP
+#
+$CMP TP4056
+D LIPO charge controller
+$ENDCMP
+#
+#End Doc Library

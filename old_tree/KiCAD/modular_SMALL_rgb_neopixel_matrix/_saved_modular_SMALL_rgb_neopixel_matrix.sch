@@ -1,0 +1,2158 @@
+EESchema Schematic File Version 2
+LIBS:modular_SMALL_rgb_neopixel_matrix-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:nicos-parts
+LIBS:modular_SMALL_rgb_neopixel_matrix-cache
+EELAYER 25 0
+EELAYER END
+$Descr A3 11693 16535 portrait
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L C C1
+U 1 1 59B2E39A
+P 1555 1105
+F 0 "C1" V 1470 1195 50  0000 L CNN
+F 1 "100nF" V 1480 825 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1593 955 50  0001 C CNN
+F 3 "" H 1555 1105 50  0001 C CNN
+	1    1555 1105
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U1
+U 1 1 59B2E72F
+P 1550 1320
+F 0 "U1" H 1550 1160 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 1555 1085 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 1550 1320 60  0001 C CNN
+F 3 "" H 1550 1320 60  0001 C CNN
+	1    1550 1320
+	1    0    0    -1  
+$EndComp
+Text GLabel 1035 1370 0    60   Input ~ 0
+GND
+Text GLabel 2000 1270 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	1705 1105 2000 1105
+Wire Wire Line
+	2000 1105 2000 1270
+Wire Wire Line
+	1100 1370 1035 1370
+Wire Wire Line
+	1405 1105 1035 1105
+Wire Wire Line
+	1035 1105 1035 1370
+$Comp
+L C C2
+U 1 1 59B2EA82
+P 3220 1105
+F 0 "C2" V 3135 1195 50  0000 L CNN
+F 1 "100nF" V 3145 825 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 3258 955 50  0001 C CNN
+F 3 "" H 3220 1105 50  0001 C CNN
+	1    3220 1105
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U2
+U 1 1 59B2EA88
+P 3215 1320
+F 0 "U2" H 3215 1160 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 3220 1085 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 3215 1320 60  0001 C CNN
+F 3 "" H 3215 1320 60  0001 C CNN
+	1    3215 1320
+	1    0    0    -1  
+$EndComp
+Text GLabel 2700 1370 0    60   Input ~ 0
+GND
+Text GLabel 3665 1270 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	3370 1105 3665 1105
+Wire Wire Line
+	3665 1105 3665 1270
+Wire Wire Line
+	2765 1370 2700 1370
+Wire Wire Line
+	3070 1105 2700 1105
+Wire Wire Line
+	2700 1105 2700 1370
+Wire Wire Line
+	2765 1270 2395 1270
+Wire Wire Line
+	2395 1270 2395 1370
+Wire Wire Line
+	2395 1370 2000 1370
+$Comp
+L C C3
+U 1 1 59B2EE3F
+P 4885 1105
+F 0 "C3" V 4800 1195 50  0000 L CNN
+F 1 "100nF" V 4810 825 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 4923 955 50  0001 C CNN
+F 3 "" H 4885 1105 50  0001 C CNN
+	1    4885 1105
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U3
+U 1 1 59B2EE45
+P 4880 1320
+F 0 "U3" H 4880 1160 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 4885 1085 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 4880 1320 60  0001 C CNN
+F 3 "" H 4880 1320 60  0001 C CNN
+	1    4880 1320
+	1    0    0    -1  
+$EndComp
+Text GLabel 4365 1370 0    60   Input ~ 0
+GND
+Text GLabel 5330 1270 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	5035 1105 5330 1105
+Wire Wire Line
+	5330 1105 5330 1270
+Wire Wire Line
+	4430 1370 4365 1370
+Wire Wire Line
+	4735 1105 4365 1105
+Wire Wire Line
+	4365 1105 4365 1370
+Wire Wire Line
+	4430 1270 4060 1270
+Wire Wire Line
+	4060 1270 4060 1370
+Wire Wire Line
+	4060 1370 3665 1370
+$Comp
+L C C4
+U 1 1 59B2F171
+P 6550 1105
+F 0 "C4" V 6465 1195 50  0000 L CNN
+F 1 "100nF" V 6475 825 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 6588 955 50  0001 C CNN
+F 3 "" H 6550 1105 50  0001 C CNN
+	1    6550 1105
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U4
+U 1 1 59B2F177
+P 6545 1320
+F 0 "U4" H 6545 1160 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 6550 1085 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 6545 1320 60  0001 C CNN
+F 3 "" H 6545 1320 60  0001 C CNN
+	1    6545 1320
+	1    0    0    -1  
+$EndComp
+Text GLabel 6030 1370 0    60   Input ~ 0
+GND
+Text GLabel 6995 1270 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	6700 1105 6995 1105
+Wire Wire Line
+	6995 1105 6995 1270
+Wire Wire Line
+	6095 1370 6030 1370
+Wire Wire Line
+	6400 1105 6030 1105
+Wire Wire Line
+	6030 1105 6030 1370
+Wire Wire Line
+	6095 1270 5725 1270
+Wire Wire Line
+	5725 1270 5725 1370
+Wire Wire Line
+	5725 1370 5330 1370
+$Comp
+L C C5
+U 1 1 59B2F187
+P 8215 1105
+F 0 "C5" V 8130 1195 50  0000 L CNN
+F 1 "100nF" V 8140 825 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 8253 955 50  0001 C CNN
+F 3 "" H 8215 1105 50  0001 C CNN
+	1    8215 1105
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U5
+U 1 1 59B2F18D
+P 8210 1320
+F 0 "U5" H 8210 1160 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 8215 1085 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 8210 1320 60  0001 C CNN
+F 3 "" H 8210 1320 60  0001 C CNN
+	1    8210 1320
+	1    0    0    -1  
+$EndComp
+Text GLabel 7695 1370 0    60   Input ~ 0
+GND
+Text GLabel 8660 1270 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	8365 1105 8660 1105
+Wire Wire Line
+	8660 1105 8660 1270
+Wire Wire Line
+	7760 1370 7695 1370
+Wire Wire Line
+	8065 1105 7695 1105
+Wire Wire Line
+	7695 1105 7695 1370
+Wire Wire Line
+	7760 1270 7390 1270
+Wire Wire Line
+	7390 1270 7390 1370
+Wire Wire Line
+	7390 1370 6995 1370
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U6
+U 1 1 59B30377
+P 9875 1320
+F 0 "U6" H 9875 1160 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 9880 1085 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 9875 1320 60  0001 C CNN
+F 3 "" H 9875 1320 60  0001 C CNN
+	1    9875 1320
+	1    0    0    -1  
+$EndComp
+Text GLabel 9360 1370 0    60   Input ~ 0
+GND
+Text GLabel 10325 1270 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	10030 1105 10325 1105
+Wire Wire Line
+	10325 1105 10325 1270
+Wire Wire Line
+	9425 1370 9360 1370
+Wire Wire Line
+	9730 1105 9360 1105
+Wire Wire Line
+	9360 1105 9360 1370
+Wire Wire Line
+	9425 1270 9055 1270
+Wire Wire Line
+	9055 1270 9055 1370
+Wire Wire Line
+	9055 1370 8660 1370
+$Comp
+L C C7
+U 1 1 59B31BB0
+P 1555 1860
+F 0 "C7" V 1470 1950 50  0000 L CNN
+F 1 "100nF" V 1480 1580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1593 1710 50  0001 C CNN
+F 3 "" H 1555 1860 50  0001 C CNN
+	1    1555 1860
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U7
+U 1 1 59B31BB6
+P 1550 2075
+F 0 "U7" H 1550 1915 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 1555 1840 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 1550 2075 60  0001 C CNN
+F 3 "" H 1550 2075 60  0001 C CNN
+	1    1550 2075
+	1    0    0    -1  
+$EndComp
+Text GLabel 1035 2125 0    60   Input ~ 0
+GND
+Text GLabel 2000 2025 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	1705 1860 2000 1860
+Wire Wire Line
+	2000 1860 2000 2025
+Wire Wire Line
+	1100 2125 1035 2125
+Wire Wire Line
+	1405 1860 1035 1860
+Wire Wire Line
+	1035 1860 1035 2125
+$Comp
+L C C8
+U 1 1 59B31BC3
+P 3220 1860
+F 0 "C8" V 3135 1950 50  0000 L CNN
+F 1 "100nF" V 3145 1580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 3258 1710 50  0001 C CNN
+F 3 "" H 3220 1860 50  0001 C CNN
+	1    3220 1860
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U8
+U 1 1 59B31BC9
+P 3215 2075
+F 0 "U8" H 3215 1915 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 3220 1840 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 3215 2075 60  0001 C CNN
+F 3 "" H 3215 2075 60  0001 C CNN
+	1    3215 2075
+	1    0    0    -1  
+$EndComp
+Text GLabel 2700 2125 0    60   Input ~ 0
+GND
+Text GLabel 3665 2025 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	3370 1860 3665 1860
+Wire Wire Line
+	3665 1860 3665 2025
+Wire Wire Line
+	2765 2125 2700 2125
+Wire Wire Line
+	3070 1860 2700 1860
+Wire Wire Line
+	2700 1860 2700 2125
+Wire Wire Line
+	2765 2025 2395 2025
+Wire Wire Line
+	2395 2025 2395 2125
+Wire Wire Line
+	2395 2125 2000 2125
+$Comp
+L C C9
+U 1 1 59B31BD9
+P 4885 1860
+F 0 "C9" V 4800 1950 50  0000 L CNN
+F 1 "100nF" V 4810 1580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 4923 1710 50  0001 C CNN
+F 3 "" H 4885 1860 50  0001 C CNN
+	1    4885 1860
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U9
+U 1 1 59B31BDF
+P 4880 2075
+F 0 "U9" H 4880 1915 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 4885 1840 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 4880 2075 60  0001 C CNN
+F 3 "" H 4880 2075 60  0001 C CNN
+	1    4880 2075
+	1    0    0    -1  
+$EndComp
+Text GLabel 4365 2125 0    60   Input ~ 0
+GND
+Text GLabel 5330 2025 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	5035 1860 5330 1860
+Wire Wire Line
+	5330 1860 5330 2025
+Wire Wire Line
+	4430 2125 4365 2125
+Wire Wire Line
+	4735 1860 4365 1860
+Wire Wire Line
+	4365 1860 4365 2125
+Wire Wire Line
+	4430 2025 4060 2025
+Wire Wire Line
+	4060 2025 4060 2125
+Wire Wire Line
+	4060 2125 3665 2125
+$Comp
+L C C10
+U 1 1 59B31BEF
+P 6550 1860
+F 0 "C10" V 6465 1950 50  0000 L CNN
+F 1 "100nF" V 6475 1580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 6588 1710 50  0001 C CNN
+F 3 "" H 6550 1860 50  0001 C CNN
+	1    6550 1860
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U10
+U 1 1 59B31BF5
+P 6545 2075
+F 0 "U10" H 6545 1915 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 6550 1840 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 6545 2075 60  0001 C CNN
+F 3 "" H 6545 2075 60  0001 C CNN
+	1    6545 2075
+	1    0    0    -1  
+$EndComp
+Text GLabel 6030 2125 0    60   Input ~ 0
+GND
+Text GLabel 6995 2025 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	6700 1860 6995 1860
+Wire Wire Line
+	6995 1860 6995 2025
+Wire Wire Line
+	6095 2125 6030 2125
+Wire Wire Line
+	6400 1860 6030 1860
+Wire Wire Line
+	6030 1860 6030 2125
+Wire Wire Line
+	6095 2025 5725 2025
+Wire Wire Line
+	5725 2025 5725 2125
+Wire Wire Line
+	5725 2125 5330 2125
+$Comp
+L C C11
+U 1 1 59B31C05
+P 8215 1860
+F 0 "C11" V 8130 1950 50  0000 L CNN
+F 1 "100nF" V 8140 1580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 8253 1710 50  0001 C CNN
+F 3 "" H 8215 1860 50  0001 C CNN
+	1    8215 1860
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U11
+U 1 1 59B31C0B
+P 8210 2075
+F 0 "U11" H 8210 1915 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 8215 1840 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 8210 2075 60  0001 C CNN
+F 3 "" H 8210 2075 60  0001 C CNN
+	1    8210 2075
+	1    0    0    -1  
+$EndComp
+Text GLabel 7695 2125 0    60   Input ~ 0
+GND
+Text GLabel 8660 2025 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	8365 1860 8660 1860
+Wire Wire Line
+	8660 1860 8660 2025
+Wire Wire Line
+	7760 2125 7695 2125
+Wire Wire Line
+	8065 1860 7695 1860
+Wire Wire Line
+	7695 1860 7695 2125
+Wire Wire Line
+	7760 2025 7390 2025
+Wire Wire Line
+	7390 2025 7390 2125
+Wire Wire Line
+	7390 2125 6995 2125
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U12
+U 1 1 59B31C21
+P 9875 2075
+F 0 "U12" H 9875 1915 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 9880 1840 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 9875 2075 60  0001 C CNN
+F 3 "" H 9875 2075 60  0001 C CNN
+	1    9875 2075
+	1    0    0    -1  
+$EndComp
+Text GLabel 9360 2125 0    60   Input ~ 0
+GND
+Text GLabel 10325 2025 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	10030 1860 10325 1860
+Wire Wire Line
+	10325 1860 10325 2025
+Wire Wire Line
+	9425 2125 9360 2125
+Wire Wire Line
+	9730 1860 9360 1860
+Wire Wire Line
+	9360 1860 9360 2125
+Wire Wire Line
+	9425 2025 9055 2025
+Wire Wire Line
+	9055 2025 9055 2125
+Wire Wire Line
+	9055 2125 8660 2125
+$Comp
+L C C13
+U 1 1 59B32459
+P 1630 2705
+F 0 "C13" V 1545 2795 50  0000 L CNN
+F 1 "100nF" V 1555 2425 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1668 2555 50  0001 C CNN
+F 3 "" H 1630 2705 50  0001 C CNN
+	1    1630 2705
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U13
+U 1 1 59B3245F
+P 1625 2920
+F 0 "U13" H 1625 2760 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 1630 2685 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 1625 2920 60  0001 C CNN
+F 3 "" H 1625 2920 60  0001 C CNN
+	1    1625 2920
+	1    0    0    -1  
+$EndComp
+Text GLabel 1110 2970 0    60   Input ~ 0
+GND
+Text GLabel 2075 2870 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	1780 2705 2075 2705
+Wire Wire Line
+	2075 2705 2075 2870
+Wire Wire Line
+	1175 2970 1110 2970
+Wire Wire Line
+	1480 2705 1110 2705
+Wire Wire Line
+	1110 2705 1110 2970
+$Comp
+L C C14
+U 1 1 59B3246C
+P 3295 2705
+F 0 "C14" V 3210 2795 50  0000 L CNN
+F 1 "100nF" V 3220 2425 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 3333 2555 50  0001 C CNN
+F 3 "" H 3295 2705 50  0001 C CNN
+	1    3295 2705
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U14
+U 1 1 59B32472
+P 3290 2920
+F 0 "U14" H 3290 2760 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 3295 2685 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 3290 2920 60  0001 C CNN
+F 3 "" H 3290 2920 60  0001 C CNN
+	1    3290 2920
+	1    0    0    -1  
+$EndComp
+Text GLabel 2775 2970 0    60   Input ~ 0
+GND
+Text GLabel 3740 2870 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	3445 2705 3740 2705
+Wire Wire Line
+	3740 2705 3740 2870
+Wire Wire Line
+	2840 2970 2775 2970
+Wire Wire Line
+	3145 2705 2775 2705
+Wire Wire Line
+	2775 2705 2775 2970
+Wire Wire Line
+	2840 2870 2470 2870
+Wire Wire Line
+	2470 2870 2470 2970
+Wire Wire Line
+	2470 2970 2075 2970
+$Comp
+L C C15
+U 1 1 59B32482
+P 4960 2705
+F 0 "C15" V 4875 2795 50  0000 L CNN
+F 1 "100nF" V 4885 2425 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 4998 2555 50  0001 C CNN
+F 3 "" H 4960 2705 50  0001 C CNN
+	1    4960 2705
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U15
+U 1 1 59B32488
+P 4955 2920
+F 0 "U15" H 4955 2760 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 4960 2685 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 4955 2920 60  0001 C CNN
+F 3 "" H 4955 2920 60  0001 C CNN
+	1    4955 2920
+	1    0    0    -1  
+$EndComp
+Text GLabel 4440 2970 0    60   Input ~ 0
+GND
+Text GLabel 5405 2870 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	5110 2705 5405 2705
+Wire Wire Line
+	5405 2705 5405 2870
+Wire Wire Line
+	4505 2970 4440 2970
+Wire Wire Line
+	4810 2705 4440 2705
+Wire Wire Line
+	4440 2705 4440 2970
+Wire Wire Line
+	4505 2870 4135 2870
+Wire Wire Line
+	4135 2870 4135 2970
+Wire Wire Line
+	4135 2970 3740 2970
+$Comp
+L C C16
+U 1 1 59B32498
+P 6625 2705
+F 0 "C16" V 6540 2795 50  0000 L CNN
+F 1 "100nF" V 6550 2425 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 6663 2555 50  0001 C CNN
+F 3 "" H 6625 2705 50  0001 C CNN
+	1    6625 2705
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U16
+U 1 1 59B3249E
+P 6620 2920
+F 0 "U16" H 6620 2760 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 6625 2685 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 6620 2920 60  0001 C CNN
+F 3 "" H 6620 2920 60  0001 C CNN
+	1    6620 2920
+	1    0    0    -1  
+$EndComp
+Text GLabel 6105 2970 0    60   Input ~ 0
+GND
+Text GLabel 7070 2870 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	6775 2705 7070 2705
+Wire Wire Line
+	7070 2705 7070 2870
+Wire Wire Line
+	6170 2970 6105 2970
+Wire Wire Line
+	6475 2705 6105 2705
+Wire Wire Line
+	6105 2705 6105 2970
+Wire Wire Line
+	6170 2870 5800 2870
+Wire Wire Line
+	5800 2870 5800 2970
+Wire Wire Line
+	5800 2970 5405 2970
+$Comp
+L C C17
+U 1 1 59B324AE
+P 8290 2705
+F 0 "C17" V 8205 2795 50  0000 L CNN
+F 1 "100nF" V 8215 2425 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 8328 2555 50  0001 C CNN
+F 3 "" H 8290 2705 50  0001 C CNN
+	1    8290 2705
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U17
+U 1 1 59B324B4
+P 8285 2920
+F 0 "U17" H 8285 2760 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 8290 2685 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 8285 2920 60  0001 C CNN
+F 3 "" H 8285 2920 60  0001 C CNN
+	1    8285 2920
+	1    0    0    -1  
+$EndComp
+Text GLabel 7770 2970 0    60   Input ~ 0
+GND
+Text GLabel 8735 2870 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	8440 2705 8735 2705
+Wire Wire Line
+	8735 2705 8735 2870
+Wire Wire Line
+	7835 2970 7770 2970
+Wire Wire Line
+	8140 2705 7770 2705
+Wire Wire Line
+	7770 2705 7770 2970
+Wire Wire Line
+	7835 2870 7465 2870
+Wire Wire Line
+	7465 2870 7465 2970
+Wire Wire Line
+	7465 2970 7070 2970
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U18
+U 1 1 59B324CA
+P 9950 2920
+F 0 "U18" H 9950 2760 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 9955 2685 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 9950 2920 60  0001 C CNN
+F 3 "" H 9950 2920 60  0001 C CNN
+	1    9950 2920
+	1    0    0    -1  
+$EndComp
+Text GLabel 9435 2970 0    60   Input ~ 0
+GND
+Text GLabel 10400 2870 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	10105 2705 10400 2705
+Wire Wire Line
+	10400 2705 10400 2870
+Wire Wire Line
+	9500 2970 9435 2970
+Wire Wire Line
+	9805 2705 9435 2705
+Wire Wire Line
+	9435 2705 9435 2970
+Wire Wire Line
+	9500 2870 9130 2870
+Wire Wire Line
+	9130 2870 9130 2970
+Wire Wire Line
+	9130 2970 8735 2970
+$Comp
+L C C19
+U 1 1 59B324DA
+P 1630 3460
+F 0 "C19" V 1545 3550 50  0000 L CNN
+F 1 "100nF" V 1555 3180 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1668 3310 50  0001 C CNN
+F 3 "" H 1630 3460 50  0001 C CNN
+	1    1630 3460
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U19
+U 1 1 59B324E0
+P 1625 3675
+F 0 "U19" H 1625 3515 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 1630 3440 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 1625 3675 60  0001 C CNN
+F 3 "" H 1625 3675 60  0001 C CNN
+	1    1625 3675
+	1    0    0    -1  
+$EndComp
+Text GLabel 1110 3725 0    60   Input ~ 0
+GND
+Text GLabel 2075 3625 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	1780 3460 2075 3460
+Wire Wire Line
+	2075 3460 2075 3625
+Wire Wire Line
+	1175 3725 1110 3725
+Wire Wire Line
+	1480 3460 1110 3460
+Wire Wire Line
+	1110 3460 1110 3725
+$Comp
+L C C20
+U 1 1 59B324ED
+P 3295 3460
+F 0 "C20" V 3210 3550 50  0000 L CNN
+F 1 "100nF" V 3220 3180 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 3333 3310 50  0001 C CNN
+F 3 "" H 3295 3460 50  0001 C CNN
+	1    3295 3460
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U20
+U 1 1 59B324F3
+P 3290 3675
+F 0 "U20" H 3290 3515 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 3295 3440 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 3290 3675 60  0001 C CNN
+F 3 "" H 3290 3675 60  0001 C CNN
+	1    3290 3675
+	1    0    0    -1  
+$EndComp
+Text GLabel 2775 3725 0    60   Input ~ 0
+GND
+Text GLabel 3740 3625 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	3445 3460 3740 3460
+Wire Wire Line
+	3740 3460 3740 3625
+Wire Wire Line
+	2840 3725 2775 3725
+Wire Wire Line
+	3145 3460 2775 3460
+Wire Wire Line
+	2775 3460 2775 3725
+Wire Wire Line
+	2840 3625 2470 3625
+Wire Wire Line
+	2470 3625 2470 3725
+Wire Wire Line
+	2470 3725 2075 3725
+$Comp
+L C C21
+U 1 1 59B32503
+P 4960 3460
+F 0 "C21" V 4875 3550 50  0000 L CNN
+F 1 "100nF" V 4885 3180 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 4998 3310 50  0001 C CNN
+F 3 "" H 4960 3460 50  0001 C CNN
+	1    4960 3460
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U21
+U 1 1 59B32509
+P 4955 3675
+F 0 "U21" H 4955 3515 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 4960 3440 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 4955 3675 60  0001 C CNN
+F 3 "" H 4955 3675 60  0001 C CNN
+	1    4955 3675
+	1    0    0    -1  
+$EndComp
+Text GLabel 4440 3725 0    60   Input ~ 0
+GND
+Text GLabel 5405 3625 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	5110 3460 5405 3460
+Wire Wire Line
+	5405 3460 5405 3625
+Wire Wire Line
+	4505 3725 4440 3725
+Wire Wire Line
+	4810 3460 4440 3460
+Wire Wire Line
+	4440 3460 4440 3725
+Wire Wire Line
+	4505 3625 4135 3625
+Wire Wire Line
+	4135 3625 4135 3725
+Wire Wire Line
+	4135 3725 3740 3725
+$Comp
+L C C22
+U 1 1 59B32519
+P 6625 3460
+F 0 "C22" V 6540 3550 50  0000 L CNN
+F 1 "100nF" V 6550 3180 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 6663 3310 50  0001 C CNN
+F 3 "" H 6625 3460 50  0001 C CNN
+	1    6625 3460
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U22
+U 1 1 59B3251F
+P 6620 3675
+F 0 "U22" H 6620 3515 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 6625 3440 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 6620 3675 60  0001 C CNN
+F 3 "" H 6620 3675 60  0001 C CNN
+	1    6620 3675
+	1    0    0    -1  
+$EndComp
+Text GLabel 6105 3725 0    60   Input ~ 0
+GND
+Text GLabel 7070 3625 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	6775 3460 7070 3460
+Wire Wire Line
+	7070 3460 7070 3625
+Wire Wire Line
+	6170 3725 6105 3725
+Wire Wire Line
+	6475 3460 6105 3460
+Wire Wire Line
+	6105 3460 6105 3725
+Wire Wire Line
+	6170 3625 5800 3625
+Wire Wire Line
+	5800 3625 5800 3725
+Wire Wire Line
+	5800 3725 5405 3725
+$Comp
+L C C23
+U 1 1 59B3252F
+P 8290 3460
+F 0 "C23" V 8205 3550 50  0000 L CNN
+F 1 "100nF" V 8215 3180 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 8328 3310 50  0001 C CNN
+F 3 "" H 8290 3460 50  0001 C CNN
+	1    8290 3460
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U23
+U 1 1 59B32535
+P 8285 3675
+F 0 "U23" H 8285 3515 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 8290 3440 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 8285 3675 60  0001 C CNN
+F 3 "" H 8285 3675 60  0001 C CNN
+	1    8285 3675
+	1    0    0    -1  
+$EndComp
+Text GLabel 7770 3725 0    60   Input ~ 0
+GND
+Text GLabel 8735 3625 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	8440 3460 8735 3460
+Wire Wire Line
+	8735 3460 8735 3625
+Wire Wire Line
+	7835 3725 7770 3725
+Wire Wire Line
+	8140 3460 7770 3460
+Wire Wire Line
+	7770 3460 7770 3725
+Wire Wire Line
+	7835 3625 7465 3625
+Wire Wire Line
+	7465 3625 7465 3725
+Wire Wire Line
+	7465 3725 7070 3725
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U24
+U 1 1 59B3254B
+P 9950 3675
+F 0 "U24" H 9950 3515 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 9955 3440 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 9950 3675 60  0001 C CNN
+F 3 "" H 9950 3675 60  0001 C CNN
+	1    9950 3675
+	1    0    0    -1  
+$EndComp
+Text GLabel 9435 3725 0    60   Input ~ 0
+GND
+Text GLabel 10400 3625 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	10105 3460 10400 3460
+Wire Wire Line
+	10400 3460 10400 3625
+Wire Wire Line
+	9500 3725 9435 3725
+Wire Wire Line
+	9805 3460 9435 3460
+Wire Wire Line
+	9435 3460 9435 3725
+Wire Wire Line
+	9500 3625 9130 3625
+Wire Wire Line
+	9130 3625 9130 3725
+Wire Wire Line
+	9130 3725 8735 3725
+$Comp
+L C C25
+U 1 1 59B32DFB
+P 1635 4305
+F 0 "C25" V 1550 4395 50  0000 L CNN
+F 1 "100nF" V 1560 4025 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1673 4155 50  0001 C CNN
+F 3 "" H 1635 4305 50  0001 C CNN
+	1    1635 4305
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U25
+U 1 1 59B32E01
+P 1630 4520
+F 0 "U25" H 1630 4360 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 1635 4285 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 1630 4520 60  0001 C CNN
+F 3 "" H 1630 4520 60  0001 C CNN
+	1    1630 4520
+	1    0    0    -1  
+$EndComp
+Text GLabel 1115 4570 0    60   Input ~ 0
+GND
+Text GLabel 2080 4470 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	1785 4305 2080 4305
+Wire Wire Line
+	2080 4305 2080 4470
+Wire Wire Line
+	1180 4570 1115 4570
+Wire Wire Line
+	1485 4305 1115 4305
+Wire Wire Line
+	1115 4305 1115 4570
+$Comp
+L C C26
+U 1 1 59B32E0E
+P 3300 4305
+F 0 "C26" V 3215 4395 50  0000 L CNN
+F 1 "100nF" V 3225 4025 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 3338 4155 50  0001 C CNN
+F 3 "" H 3300 4305 50  0001 C CNN
+	1    3300 4305
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U26
+U 1 1 59B32E14
+P 3295 4520
+F 0 "U26" H 3295 4360 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 3300 4285 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 3295 4520 60  0001 C CNN
+F 3 "" H 3295 4520 60  0001 C CNN
+	1    3295 4520
+	1    0    0    -1  
+$EndComp
+Text GLabel 2780 4570 0    60   Input ~ 0
+GND
+Text GLabel 3745 4470 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	3450 4305 3745 4305
+Wire Wire Line
+	3745 4305 3745 4470
+Wire Wire Line
+	2845 4570 2780 4570
+Wire Wire Line
+	3150 4305 2780 4305
+Wire Wire Line
+	2780 4305 2780 4570
+Wire Wire Line
+	2845 4470 2475 4470
+Wire Wire Line
+	2475 4470 2475 4570
+Wire Wire Line
+	2475 4570 2080 4570
+$Comp
+L C C27
+U 1 1 59B32E24
+P 4965 4305
+F 0 "C27" V 4880 4395 50  0000 L CNN
+F 1 "100nF" V 4890 4025 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 5003 4155 50  0001 C CNN
+F 3 "" H 4965 4305 50  0001 C CNN
+	1    4965 4305
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U27
+U 1 1 59B32E2A
+P 4960 4520
+F 0 "U27" H 4960 4360 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 4965 4285 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 4960 4520 60  0001 C CNN
+F 3 "" H 4960 4520 60  0001 C CNN
+	1    4960 4520
+	1    0    0    -1  
+$EndComp
+Text GLabel 4445 4570 0    60   Input ~ 0
+GND
+Text GLabel 5410 4470 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	5115 4305 5410 4305
+Wire Wire Line
+	5410 4305 5410 4470
+Wire Wire Line
+	4510 4570 4445 4570
+Wire Wire Line
+	4815 4305 4445 4305
+Wire Wire Line
+	4445 4305 4445 4570
+Wire Wire Line
+	4510 4470 4140 4470
+Wire Wire Line
+	4140 4470 4140 4570
+Wire Wire Line
+	4140 4570 3745 4570
+$Comp
+L C C28
+U 1 1 59B32E3A
+P 6630 4305
+F 0 "C28" V 6545 4395 50  0000 L CNN
+F 1 "100nF" V 6555 4025 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 6668 4155 50  0001 C CNN
+F 3 "" H 6630 4305 50  0001 C CNN
+	1    6630 4305
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U28
+U 1 1 59B32E40
+P 6625 4520
+F 0 "U28" H 6625 4360 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 6630 4285 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 6625 4520 60  0001 C CNN
+F 3 "" H 6625 4520 60  0001 C CNN
+	1    6625 4520
+	1    0    0    -1  
+$EndComp
+Text GLabel 6110 4570 0    60   Input ~ 0
+GND
+Text GLabel 7075 4470 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	6780 4305 7075 4305
+Wire Wire Line
+	7075 4305 7075 4470
+Wire Wire Line
+	6175 4570 6110 4570
+Wire Wire Line
+	6480 4305 6110 4305
+Wire Wire Line
+	6110 4305 6110 4570
+Wire Wire Line
+	6175 4470 5805 4470
+Wire Wire Line
+	5805 4470 5805 4570
+Wire Wire Line
+	5805 4570 5410 4570
+$Comp
+L C C29
+U 1 1 59B32E50
+P 8295 4305
+F 0 "C29" V 8210 4395 50  0000 L CNN
+F 1 "100nF" V 8220 4025 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 8333 4155 50  0001 C CNN
+F 3 "" H 8295 4305 50  0001 C CNN
+	1    8295 4305
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U29
+U 1 1 59B32E56
+P 8290 4520
+F 0 "U29" H 8290 4360 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 8295 4285 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 8290 4520 60  0001 C CNN
+F 3 "" H 8290 4520 60  0001 C CNN
+	1    8290 4520
+	1    0    0    -1  
+$EndComp
+Text GLabel 7775 4570 0    60   Input ~ 0
+GND
+Text GLabel 8740 4470 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	8445 4305 8740 4305
+Wire Wire Line
+	8740 4305 8740 4470
+Wire Wire Line
+	7840 4570 7775 4570
+Wire Wire Line
+	8145 4305 7775 4305
+Wire Wire Line
+	7775 4305 7775 4570
+Wire Wire Line
+	7840 4470 7470 4470
+Wire Wire Line
+	7470 4470 7470 4570
+Wire Wire Line
+	7470 4570 7075 4570
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U30
+U 1 1 59B32E6C
+P 9955 4520
+F 0 "U30" H 9955 4360 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 9960 4285 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 9955 4520 60  0001 C CNN
+F 3 "" H 9955 4520 60  0001 C CNN
+	1    9955 4520
+	1    0    0    -1  
+$EndComp
+Text GLabel 9440 4570 0    60   Input ~ 0
+GND
+Text GLabel 10405 4470 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	10110 4305 10405 4305
+Wire Wire Line
+	10405 4305 10405 4470
+Wire Wire Line
+	9505 4570 9440 4570
+Wire Wire Line
+	9810 4305 9440 4305
+Wire Wire Line
+	9440 4305 9440 4570
+Wire Wire Line
+	9505 4470 9135 4470
+Wire Wire Line
+	9135 4470 9135 4570
+Wire Wire Line
+	9135 4570 8740 4570
+$Comp
+L C C31
+U 1 1 59B32E7C
+P 1635 5060
+F 0 "C31" V 1550 5150 50  0000 L CNN
+F 1 "100nF" V 1560 4780 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1673 4910 50  0001 C CNN
+F 3 "" H 1635 5060 50  0001 C CNN
+	1    1635 5060
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U31
+U 1 1 59B32E82
+P 1630 5275
+F 0 "U31" H 1630 5115 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 1635 5040 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 1630 5275 60  0001 C CNN
+F 3 "" H 1630 5275 60  0001 C CNN
+	1    1630 5275
+	1    0    0    -1  
+$EndComp
+Text GLabel 1115 5325 0    60   Input ~ 0
+GND
+Text GLabel 2080 5225 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	1785 5060 2080 5060
+Wire Wire Line
+	2080 5060 2080 5225
+Wire Wire Line
+	1180 5325 1115 5325
+Wire Wire Line
+	1485 5060 1115 5060
+Wire Wire Line
+	1115 5060 1115 5325
+$Comp
+L C C32
+U 1 1 59B32E8F
+P 3300 5060
+F 0 "C32" V 3215 5150 50  0000 L CNN
+F 1 "100nF" V 3225 4780 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 3338 4910 50  0001 C CNN
+F 3 "" H 3300 5060 50  0001 C CNN
+	1    3300 5060
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U32
+U 1 1 59B32E95
+P 3295 5275
+F 0 "U32" H 3295 5115 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 3300 5040 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 3295 5275 60  0001 C CNN
+F 3 "" H 3295 5275 60  0001 C CNN
+	1    3295 5275
+	1    0    0    -1  
+$EndComp
+Text GLabel 2780 5325 0    60   Input ~ 0
+GND
+Text GLabel 3745 5225 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	3450 5060 3745 5060
+Wire Wire Line
+	3745 5060 3745 5225
+Wire Wire Line
+	2845 5325 2780 5325
+Wire Wire Line
+	3150 5060 2780 5060
+Wire Wire Line
+	2780 5060 2780 5325
+Wire Wire Line
+	2845 5225 2475 5225
+Wire Wire Line
+	2475 5225 2475 5325
+Wire Wire Line
+	2475 5325 2080 5325
+$Comp
+L C C33
+U 1 1 59B32EA5
+P 4965 5060
+F 0 "C33" V 4880 5150 50  0000 L CNN
+F 1 "100nF" V 4890 4780 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 5003 4910 50  0001 C CNN
+F 3 "" H 4965 5060 50  0001 C CNN
+	1    4965 5060
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U33
+U 1 1 59B32EAB
+P 4960 5275
+F 0 "U33" H 4960 5115 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 4965 5040 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 4960 5275 60  0001 C CNN
+F 3 "" H 4960 5275 60  0001 C CNN
+	1    4960 5275
+	1    0    0    -1  
+$EndComp
+Text GLabel 4445 5325 0    60   Input ~ 0
+GND
+Text GLabel 5410 5225 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	5115 5060 5410 5060
+Wire Wire Line
+	5410 5060 5410 5225
+Wire Wire Line
+	4510 5325 4445 5325
+Wire Wire Line
+	4815 5060 4445 5060
+Wire Wire Line
+	4445 5060 4445 5325
+Wire Wire Line
+	4510 5225 4140 5225
+Wire Wire Line
+	4140 5225 4140 5325
+Wire Wire Line
+	4140 5325 3745 5325
+$Comp
+L C C34
+U 1 1 59B32EBB
+P 6630 5060
+F 0 "C34" V 6545 5150 50  0000 L CNN
+F 1 "100nF" V 6555 4780 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 6668 4910 50  0001 C CNN
+F 3 "" H 6630 5060 50  0001 C CNN
+	1    6630 5060
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U34
+U 1 1 59B32EC1
+P 6625 5275
+F 0 "U34" H 6625 5115 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 6630 5040 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 6625 5275 60  0001 C CNN
+F 3 "" H 6625 5275 60  0001 C CNN
+	1    6625 5275
+	1    0    0    -1  
+$EndComp
+Text GLabel 6110 5325 0    60   Input ~ 0
+GND
+Text GLabel 7075 5225 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	6780 5060 7075 5060
+Wire Wire Line
+	7075 5060 7075 5225
+Wire Wire Line
+	6175 5325 6110 5325
+Wire Wire Line
+	6480 5060 6110 5060
+Wire Wire Line
+	6110 5060 6110 5325
+Wire Wire Line
+	6175 5225 5805 5225
+Wire Wire Line
+	5805 5225 5805 5325
+Wire Wire Line
+	5805 5325 5410 5325
+$Comp
+L C C35
+U 1 1 59B32ED1
+P 8295 5060
+F 0 "C35" V 8210 5150 50  0000 L CNN
+F 1 "100nF" V 8220 4780 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 8333 4910 50  0001 C CNN
+F 3 "" H 8295 5060 50  0001 C CNN
+	1    8295 5060
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U35
+U 1 1 59B32ED7
+P 8290 5275
+F 0 "U35" H 8290 5115 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 8295 5040 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 8290 5275 60  0001 C CNN
+F 3 "" H 8290 5275 60  0001 C CNN
+	1    8290 5275
+	1    0    0    -1  
+$EndComp
+Text GLabel 7775 5325 0    60   Input ~ 0
+GND
+Text GLabel 8740 5225 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	8445 5060 8740 5060
+Wire Wire Line
+	8740 5060 8740 5225
+Wire Wire Line
+	7840 5325 7775 5325
+Wire Wire Line
+	8145 5060 7775 5060
+Wire Wire Line
+	7775 5060 7775 5325
+Wire Wire Line
+	7840 5225 7470 5225
+Wire Wire Line
+	7470 5225 7470 5325
+Wire Wire Line
+	7470 5325 7075 5325
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U36
+U 1 1 59B32EED
+P 9955 5275
+F 0 "U36" H 9955 5115 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 9960 5040 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 9955 5275 60  0001 C CNN
+F 3 "" H 9955 5275 60  0001 C CNN
+	1    9955 5275
+	1    0    0    -1  
+$EndComp
+Text GLabel 9440 5325 0    60   Input ~ 0
+GND
+Text GLabel 10405 5225 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	10110 5060 10405 5060
+Wire Wire Line
+	10405 5060 10405 5225
+Wire Wire Line
+	9505 5325 9440 5325
+Wire Wire Line
+	9810 5060 9440 5060
+Wire Wire Line
+	9440 5060 9440 5325
+Wire Wire Line
+	9505 5225 9135 5225
+Wire Wire Line
+	9135 5225 9135 5325
+Wire Wire Line
+	9135 5325 8740 5325
+$Comp
+L C C37
+U 1 1 59B32EFD
+P 1710 5905
+F 0 "C37" V 1625 5995 50  0000 L CNN
+F 1 "100nF" V 1635 5625 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1748 5755 50  0001 C CNN
+F 3 "" H 1710 5905 50  0001 C CNN
+	1    1710 5905
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U37
+U 1 1 59B32F03
+P 1705 6120
+F 0 "U37" H 1705 5960 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 1710 5885 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 1705 6120 60  0001 C CNN
+F 3 "" H 1705 6120 60  0001 C CNN
+	1    1705 6120
+	1    0    0    -1  
+$EndComp
+Text GLabel 1190 6170 0    60   Input ~ 0
+GND
+Text GLabel 2155 6070 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	1860 5905 2155 5905
+Wire Wire Line
+	2155 5905 2155 6070
+Wire Wire Line
+	1255 6170 1190 6170
+Wire Wire Line
+	1560 5905 1190 5905
+Wire Wire Line
+	1190 5905 1190 6170
+$Comp
+L C C38
+U 1 1 59B32F10
+P 3375 5905
+F 0 "C38" V 3290 5995 50  0000 L CNN
+F 1 "100nF" V 3300 5625 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 3413 5755 50  0001 C CNN
+F 3 "" H 3375 5905 50  0001 C CNN
+	1    3375 5905
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U38
+U 1 1 59B32F16
+P 3370 6120
+F 0 "U38" H 3370 5960 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 3375 5885 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 3370 6120 60  0001 C CNN
+F 3 "" H 3370 6120 60  0001 C CNN
+	1    3370 6120
+	1    0    0    -1  
+$EndComp
+Text GLabel 2855 6170 0    60   Input ~ 0
+GND
+Text GLabel 3820 6070 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	3525 5905 3820 5905
+Wire Wire Line
+	3820 5905 3820 6070
+Wire Wire Line
+	2920 6170 2855 6170
+Wire Wire Line
+	3225 5905 2855 5905
+Wire Wire Line
+	2855 5905 2855 6170
+Wire Wire Line
+	2920 6070 2550 6070
+Wire Wire Line
+	2550 6070 2550 6170
+Wire Wire Line
+	2550 6170 2155 6170
+$Comp
+L C C39
+U 1 1 59B32F26
+P 5040 5905
+F 0 "C39" V 4955 5995 50  0000 L CNN
+F 1 "100nF" V 4965 5625 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 5078 5755 50  0001 C CNN
+F 3 "" H 5040 5905 50  0001 C CNN
+	1    5040 5905
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U39
+U 1 1 59B32F2C
+P 5035 6120
+F 0 "U39" H 5035 5960 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 5040 5885 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 5035 6120 60  0001 C CNN
+F 3 "" H 5035 6120 60  0001 C CNN
+	1    5035 6120
+	1    0    0    -1  
+$EndComp
+Text GLabel 4520 6170 0    60   Input ~ 0
+GND
+Text GLabel 5485 6070 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	5190 5905 5485 5905
+Wire Wire Line
+	5485 5905 5485 6070
+Wire Wire Line
+	4585 6170 4520 6170
+Wire Wire Line
+	4890 5905 4520 5905
+Wire Wire Line
+	4520 5905 4520 6170
+Wire Wire Line
+	4585 6070 4215 6070
+Wire Wire Line
+	4215 6070 4215 6170
+Wire Wire Line
+	4215 6170 3820 6170
+$Comp
+L C C40
+U 1 1 59B32F3C
+P 6705 5905
+F 0 "C40" V 6620 5995 50  0000 L CNN
+F 1 "100nF" V 6630 5625 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 6743 5755 50  0001 C CNN
+F 3 "" H 6705 5905 50  0001 C CNN
+	1    6705 5905
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U40
+U 1 1 59B32F42
+P 6700 6120
+F 0 "U40" H 6700 5960 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 6705 5885 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 6700 6120 60  0001 C CNN
+F 3 "" H 6700 6120 60  0001 C CNN
+	1    6700 6120
+	1    0    0    -1  
+$EndComp
+Text GLabel 6185 6170 0    60   Input ~ 0
+GND
+Text GLabel 7150 6070 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	6855 5905 7150 5905
+Wire Wire Line
+	7150 5905 7150 6070
+Wire Wire Line
+	6250 6170 6185 6170
+Wire Wire Line
+	6555 5905 6185 5905
+Wire Wire Line
+	6185 5905 6185 6170
+Wire Wire Line
+	6250 6070 5880 6070
+Wire Wire Line
+	5880 6070 5880 6170
+Wire Wire Line
+	5880 6170 5485 6170
+$Comp
+L C C41
+U 1 1 59B32F52
+P 8370 5905
+F 0 "C41" V 8285 5995 50  0000 L CNN
+F 1 "100nF" V 8295 5625 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 8408 5755 50  0001 C CNN
+F 3 "" H 8370 5905 50  0001 C CNN
+	1    8370 5905
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U41
+U 1 1 59B32F58
+P 8365 6120
+F 0 "U41" H 8365 5960 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 8370 5885 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 8365 6120 60  0001 C CNN
+F 3 "" H 8365 6120 60  0001 C CNN
+	1    8365 6120
+	1    0    0    -1  
+$EndComp
+Text GLabel 7850 6170 0    60   Input ~ 0
+GND
+Text GLabel 8815 6070 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	8520 5905 8815 5905
+Wire Wire Line
+	8815 5905 8815 6070
+Wire Wire Line
+	7915 6170 7850 6170
+Wire Wire Line
+	8220 5905 7850 5905
+Wire Wire Line
+	7850 5905 7850 6170
+Wire Wire Line
+	7915 6070 7545 6070
+Wire Wire Line
+	7545 6070 7545 6170
+Wire Wire Line
+	7545 6170 7150 6170
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U42
+U 1 1 59B32F6E
+P 10030 6120
+F 0 "U42" H 10030 5960 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 10035 5885 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 10030 6120 60  0001 C CNN
+F 3 "" H 10030 6120 60  0001 C CNN
+	1    10030 6120
+	1    0    0    -1  
+$EndComp
+Text GLabel 9515 6170 0    60   Input ~ 0
+GND
+Text GLabel 10480 6070 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	10185 5905 10480 5905
+Wire Wire Line
+	10480 5905 10480 6070
+Wire Wire Line
+	9580 6170 9515 6170
+Wire Wire Line
+	9885 5905 9515 5905
+Wire Wire Line
+	9515 5905 9515 6170
+Wire Wire Line
+	9580 6070 9210 6070
+Wire Wire Line
+	9210 6070 9210 6170
+Wire Wire Line
+	9210 6170 8815 6170
+$Comp
+L C C43
+U 1 1 59B32F7E
+P 1710 6660
+F 0 "C43" V 1625 6750 50  0000 L CNN
+F 1 "100nF" V 1635 6380 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1748 6510 50  0001 C CNN
+F 3 "" H 1710 6660 50  0001 C CNN
+	1    1710 6660
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U43
+U 1 1 59B32F84
+P 1705 6875
+F 0 "U43" H 1705 6715 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 1710 6640 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 1705 6875 60  0001 C CNN
+F 3 "" H 1705 6875 60  0001 C CNN
+	1    1705 6875
+	1    0    0    -1  
+$EndComp
+Text GLabel 1190 6925 0    60   Input ~ 0
+GND
+Text GLabel 2155 6825 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	1860 6660 2155 6660
+Wire Wire Line
+	2155 6660 2155 6825
+Wire Wire Line
+	1255 6925 1190 6925
+Wire Wire Line
+	1560 6660 1190 6660
+Wire Wire Line
+	1190 6660 1190 6925
+$Comp
+L C C44
+U 1 1 59B32F91
+P 3375 6660
+F 0 "C44" V 3290 6750 50  0000 L CNN
+F 1 "100nF" V 3300 6380 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 3413 6510 50  0001 C CNN
+F 3 "" H 3375 6660 50  0001 C CNN
+	1    3375 6660
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U44
+U 1 1 59B32F97
+P 3370 6875
+F 0 "U44" H 3370 6715 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 3375 6640 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 3370 6875 60  0001 C CNN
+F 3 "" H 3370 6875 60  0001 C CNN
+	1    3370 6875
+	1    0    0    -1  
+$EndComp
+Text GLabel 2855 6925 0    60   Input ~ 0
+GND
+Text GLabel 3820 6825 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	3525 6660 3820 6660
+Wire Wire Line
+	3820 6660 3820 6825
+Wire Wire Line
+	2920 6925 2855 6925
+Wire Wire Line
+	3225 6660 2855 6660
+Wire Wire Line
+	2855 6660 2855 6925
+Wire Wire Line
+	2920 6825 2550 6825
+Wire Wire Line
+	2550 6825 2550 6925
+Wire Wire Line
+	2550 6925 2155 6925
+$Comp
+L C C45
+U 1 1 59B32FA7
+P 5040 6660
+F 0 "C45" V 4955 6750 50  0000 L CNN
+F 1 "100nF" V 4965 6380 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 5078 6510 50  0001 C CNN
+F 3 "" H 5040 6660 50  0001 C CNN
+	1    5040 6660
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U45
+U 1 1 59B32FAD
+P 5035 6875
+F 0 "U45" H 5035 6715 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 5040 6640 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 5035 6875 60  0001 C CNN
+F 3 "" H 5035 6875 60  0001 C CNN
+	1    5035 6875
+	1    0    0    -1  
+$EndComp
+Text GLabel 4520 6925 0    60   Input ~ 0
+GND
+Text GLabel 5485 6825 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	5190 6660 5485 6660
+Wire Wire Line
+	5485 6660 5485 6825
+Wire Wire Line
+	4585 6925 4520 6925
+Wire Wire Line
+	4890 6660 4520 6660
+Wire Wire Line
+	4520 6660 4520 6925
+Wire Wire Line
+	4585 6825 4215 6825
+Wire Wire Line
+	4215 6825 4215 6925
+Wire Wire Line
+	4215 6925 3820 6925
+$Comp
+L C C46
+U 1 1 59B32FBD
+P 6705 6660
+F 0 "C46" V 6620 6750 50  0000 L CNN
+F 1 "100nF" V 6630 6380 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 6743 6510 50  0001 C CNN
+F 3 "" H 6705 6660 50  0001 C CNN
+	1    6705 6660
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U46
+U 1 1 59B32FC3
+P 6700 6875
+F 0 "U46" H 6700 6715 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 6705 6640 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 6700 6875 60  0001 C CNN
+F 3 "" H 6700 6875 60  0001 C CNN
+	1    6700 6875
+	1    0    0    -1  
+$EndComp
+Text GLabel 6185 6925 0    60   Input ~ 0
+GND
+Text GLabel 7150 6825 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	6855 6660 7150 6660
+Wire Wire Line
+	7150 6660 7150 6825
+Wire Wire Line
+	6250 6925 6185 6925
+Wire Wire Line
+	6555 6660 6185 6660
+Wire Wire Line
+	6185 6660 6185 6925
+Wire Wire Line
+	6250 6825 5880 6825
+Wire Wire Line
+	5880 6825 5880 6925
+Wire Wire Line
+	5880 6925 5485 6925
+$Comp
+L C C47
+U 1 1 59B32FD3
+P 8370 6660
+F 0 "C47" V 8285 6750 50  0000 L CNN
+F 1 "100nF" V 8295 6380 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 8408 6510 50  0001 C CNN
+F 3 "" H 8370 6660 50  0001 C CNN
+	1    8370 6660
+	0    1    1    0   
+$EndComp
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U47
+U 1 1 59B32FD9
+P 8365 6875
+F 0 "U47" H 8365 6715 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 8370 6640 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 8365 6875 60  0001 C CNN
+F 3 "" H 8365 6875 60  0001 C CNN
+	1    8365 6875
+	1    0    0    -1  
+$EndComp
+Text GLabel 7850 6925 0    60   Input ~ 0
+GND
+Text GLabel 8815 6825 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	8520 6660 8815 6660
+Wire Wire Line
+	8815 6660 8815 6825
+Wire Wire Line
+	7915 6925 7850 6925
+Wire Wire Line
+	8220 6660 7850 6660
+Wire Wire Line
+	7850 6660 7850 6925
+Wire Wire Line
+	7915 6825 7545 6825
+Wire Wire Line
+	7545 6825 7545 6925
+Wire Wire Line
+	7545 6925 7150 6925
+$Comp
+L RGB_ws2812_3535-RESCUE-modular_SMALL_rgb_neopixel_matrix U48
+U 1 1 59B32FEF
+P 10030 6875
+F 0 "U48" H 10030 6715 60  0000 C CNN
+F 1 "RGB_ws2812_3535" H 10035 6640 60  0000 C CNN
+F 2 "lt_foots:SK6812_MINI_right" H 10030 6875 60  0001 C CNN
+F 3 "" H 10030 6875 60  0001 C CNN
+	1    10030 6875
+	1    0    0    -1  
+$EndComp
+Text GLabel 9515 6925 0    60   Input ~ 0
+GND
+Text GLabel 10480 6825 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	10185 6660 10480 6660
+Wire Wire Line
+	10480 6660 10480 6825
+Wire Wire Line
+	9580 6925 9515 6925
+Wire Wire Line
+	9885 6660 9515 6660
+Wire Wire Line
+	9515 6660 9515 6925
+Wire Wire Line
+	9580 6825 9210 6825
+Wire Wire Line
+	9210 6825 9210 6925
+Wire Wire Line
+	9210 6925 8815 6925
+Wire Wire Line
+	10325 1370 10390 1370
+Wire Wire Line
+	10390 1370 10390 1660
+Wire Wire Line
+	10390 1660 1100 1660
+Wire Wire Line
+	1100 1660 1100 2025
+Wire Wire Line
+	10325 2125 10375 2125
+Wire Wire Line
+	10375 2125 10375 2470
+Wire Wire Line
+	10375 2470 1175 2470
+Wire Wire Line
+	1175 2470 1175 2870
+Wire Wire Line
+	10400 2970 10495 2970
+Wire Wire Line
+	10495 2970 10495 3265
+Wire Wire Line
+	10495 3265 1175 3265
+Wire Wire Line
+	1175 3265 1175 3625
+Wire Wire Line
+	10400 3725 10490 3725
+Wire Wire Line
+	10490 3725 10490 4015
+Wire Wire Line
+	10490 4015 1180 4015
+Wire Wire Line
+	1180 4015 1180 4470
+Wire Wire Line
+	10405 4570 10505 4570
+Wire Wire Line
+	10505 4570 10505 4855
+Wire Wire Line
+	10505 4855 1180 4855
+Wire Wire Line
+	1180 4855 1180 5225
+Wire Wire Line
+	10405 5325 10550 5325
+Wire Wire Line
+	10550 5325 10550 5670
+Wire Wire Line
+	10550 5670 1255 5670
+Wire Wire Line
+	1255 5670 1255 6070
+Wire Wire Line
+	10480 6170 10625 6170
+Wire Wire Line
+	10625 6170 10625 6475
+Wire Wire Line
+	10625 6475 1255 6475
+Wire Wire Line
+	1255 6475 1255 6825
+NoConn ~ 1100 1270
+$Comp
+L CONN_01X03 J4
+U 1 1 59B3DE1B
+P 1940 8145
+F 0 "J4" H 1940 8345 50  0000 C CNN
+F 1 "CONN_01X03" V 2040 8145 50  0000 C CNN
+F 2 "lt_foots:3pin_through_conn" H 1940 8145 50  0001 C CNN
+F 3 "" H 1940 8145 50  0001 C CNN
+	1    1940 8145
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X03 J1
+U 1 1 59B3DFEA
+P 1930 7580
+F 0 "J1" H 1930 7780 50  0000 C CNN
+F 1 "CONN_01X03" V 2030 7580 50  0000 C CNN
+F 2 "lt_foots:3pin_through_conn" H 1930 7580 50  0001 C CNN
+F 3 "" H 1930 7580 50  0001 C CNN
+	1    1930 7580
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X03 J2
+U 1 1 59B3E0C2
+P 4140 7625
+F 0 "J2" H 4140 7825 50  0000 C CNN
+F 1 "CONN_01X03" V 4240 7625 50  0000 C CNN
+F 2 "lt_foots:3pin_through_conn" H 4140 7625 50  0001 C CNN
+F 3 "" H 4140 7625 50  0001 C CNN
+	1    4140 7625
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X03 J5
+U 1 1 59B3E1D1
+P 4145 8300
+F 0 "J5" H 4145 8500 50  0000 C CNN
+F 1 "CONN_01X03" V 4245 8300 50  0000 C CNN
+F 2 "lt_foots:3pin_through_conn" H 4145 8300 50  0001 C CNN
+F 3 "" H 4145 8300 50  0001 C CNN
+	1    4145 8300
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X08 J3
+U 1 1 59B3E2B9
+P 7310 7830
+F 0 "J3" H 7310 8280 50  0000 C CNN
+F 1 "CONN_01X08" V 7410 7830 50  0000 C CNN
+F 2 "lt_foots:1x08_Pitch2.00mm_Bigpad" H 7310 7830 50  0001 C CNN
+F 3 "" H 7310 7830 50  0001 C CNN
+	1    7310 7830
+	-1   0    0    1   
+$EndComp
+Text GLabel 2130 7480 2    60   Input ~ 0
+VCC
+Text GLabel 2130 7580 2    60   Input ~ 0
+VCC
+Text GLabel 2130 7680 2    60   Input ~ 0
+VCC
+NoConn ~ 7510 7580
+NoConn ~ 7510 7680
+NoConn ~ 7510 7780
+NoConn ~ 7510 7880
+NoConn ~ 7510 7980
+NoConn ~ 7510 7480
+Text GLabel 4345 8200 2    60   Input ~ 0
+GND
+Text GLabel 4345 8300 2    60   Input ~ 0
+GND
+Text GLabel 4345 8400 2    60   Input ~ 0
+GND
+Text GLabel 2140 8045 2    60   Input ~ 0
+PWM_1
+Text GLabel 2140 8145 2    60   Input ~ 0
+PWM_1
+Text GLabel 2140 8245 2    60   Input ~ 0
+PWM_1
+Text GLabel 4340 7525 2    60   Input ~ 0
+OCA_1
+Text GLabel 4340 7625 2    60   Input ~ 0
+OCA_1
+Text GLabel 4340 7725 2    60   Input ~ 0
+OCA_1
+Text GLabel 10480 6925 2    60   Input ~ 0
+OCA_1
+$Comp
+L LED D1
+U 1 1 59B40413
+P 2345 9470
+F 0 "D1" H 2345 9570 50  0000 C CNN
+F 1 "CREE_XP" V 2110 9470 50  0000 C CNN
+F 2 "lt_foots:LED_Cree-XP_x" H 2345 9470 50  0001 C CNN
+F 3 "" H 2345 9470 50  0001 C CNN
+	1    2345 9470
+	0    1    1    0   
+$EndComp
+Text GLabel 1900 9320 0    60   Input ~ 0
+PWM_1
+Wire Wire Line
+	1900 9320 3165 9320
+Connection ~ 2785 9320
+Connection ~ 2345 9320
+Text GLabel 3405 9620 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	3405 9620 2345 9620
+Connection ~ 3165 9620
+Connection ~ 2785 9620
+$Comp
+L R R1
+U 1 1 59B45499
+P 8045 8125
+F 0 "R1" V 8045 8125 50  0000 C CNN
+F 1 "15KΩ_NTC" H 7775 8120 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7975 8125 50  0001 C CNN
+F 3 "" H 8045 8125 50  0001 C CNN
+	1    8045 8125
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D2
+U 1 1 59B479BB
+P 2785 9470
+F 0 "D2" H 2785 9570 50  0000 C CNN
+F 1 "CREE_XP" V 2550 9470 50  0000 C CNN
+F 2 "lt_foots:LED_Cree-XP_x" H 2785 9470 50  0001 C CNN
+F 3 "" H 2785 9470 50  0001 C CNN
+	1    2785 9470
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D3
+U 1 1 59B47C73
+P 3165 9470
+F 0 "D3" H 3165 9570 50  0000 C CNN
+F 1 "CREE_XP" V 2930 9470 50  0000 C CNN
+F 2 "lt_foots:LED_Cree-XP_x" H 3165 9470 50  0001 C CNN
+F 3 "" H 3165 9470 50  0001 C CNN
+	1    3165 9470
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 59B520AA
+P 7660 8180
+F 0 "R2" V 7660 8180 50  0000 C CNN
+F 1 "0Ω_Bridge" V 7765 8180 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 7590 8180 50  0001 C CNN
+F 3 "" H 7660 8180 50  0001 C CNN
+	1    7660 8180
+	0    1    1    0   
+$EndComp
+$Comp
+L R R3
+U 1 1 59B52ACF
+P 7660 8080
+F 0 "R3" V 7660 8080 50  0000 C CNN
+F 1 "0Ω_Bridge" V 7555 8160 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 7590 8080 50  0001 C CNN
+F 3 "" H 7660 8080 50  0001 C CNN
+	1    7660 8080
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8045 7975 7810 7975
+Wire Wire Line
+	7810 7975 7810 8080
+Wire Wire Line
+	8045 8275 7810 8275
+Wire Wire Line
+	7810 8275 7810 8180
+$EndSCHEMATC
