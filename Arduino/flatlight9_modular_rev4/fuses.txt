@@ -1,3 +1,0 @@
-Set the fuses for the ATMega 8A
-
-avrdude -e -c usbasp -pm8 -B10 -U lfuse:w:0xe4:m -U hfuse:w:0xd9:m 
