@@ -89,11 +89,58 @@ void SLEEPOLED(){
   u8g2.setPowerSave(1);                                     // put oled to sleep
 }
 
+void int1ISR()
+{
+  //Serial.println("Interrupt serviced.");
+  int1Status++;
+}
+
 void setup() {
   // wait for it ....
   delay(1000);
   // there you go ;)
   
+
+  // IMU SETUP
+  
+  myIMU.begin();
+  uint8_t errorAccumulator = 0;
+  uint8_t dataToWrite = 0;  //Temporary variable
+
+  //Setup the accelerometer******************************
+  dataToWrite = 0; //Start Fresh!
+  dataToWrite |= LSM6DS3_ACC_GYRO_BW_XL_200Hz;
+  dataToWrite |= LSM6DS3_ACC_GYRO_FS_XL_2g;
+  dataToWrite |= LSM6DS3_ACC_GYRO_ODR_XL_416Hz;
+
+  // //Now, write the patched together data
+  errorAccumulator += myIMU.writeRegister(LSM6DS3_ACC_GYRO_CTRL1_XL, dataToWrite);
+  //Set the ODR bit
+  errorAccumulator += myIMU.readRegister(&dataToWrite, LSM6DS3_ACC_GYRO_CTRL4_C);
+  dataToWrite &= ~((uint8_t)LSM6DS3_ACC_GYRO_BW_SCAL_ODR_ENABLED);
+  // Enable tap detection on X, Y, Z axis, but do not latch output
+  errorAccumulator += myIMU.writeRegister( LSM6DS3_ACC_GYRO_TAP_CFG1, 0x0E );
+   // Set tap threshold
+  // Write 0Ch into TAP_THS_6D
+  errorAccumulator += myIMU.writeRegister( LSM6DS3_ACC_GYRO_TAP_THS_6D, 0x03 );
+  // Set Duration, Quiet and Shock time windows
+  // Write 7Fh into INT_DUR2
+  errorAccumulator += myIMU.writeRegister( LSM6DS3_ACC_GYRO_INT_DUR2, 0x7F );
+   // Single & Double tap enabled (SINGLE_DOUBLE_TAP = 1)
+  // Write 80h into WAKE_UP_THS
+  errorAccumulator += myIMU.writeRegister( LSM6DS3_ACC_GYRO_WAKE_UP_THS, 0x80 );
+  // Single tap interrupt driven to INT1 pin -- enable latch
+  // Write 08h into MD1_CFG
+  errorAccumulator += myIMU.writeRegister( LSM6DS3_ACC_GYRO_MD1_CFG, 0x48 );
+
+  pinMode(int1Pin, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(int1Pin), int1ISR, RISING);
+
+  // setup pixels (bgr!)
+  LEDS.addLeds<LED_TYPE, LED_DT, LED_CK, COLOR_ORDER>(leds, NUM_LEDS);  //WS2801 and APA102
+  FastLED.setBrightness(max_bright);
+  currentPalette = OceanColors_p;
+    
   //define PIN Modes
   pinMode(BUTTON_UP, INPUT_PULLUP);
   pinMode(BUTTON_DOWN, INPUT_PULLUP);
@@ -104,18 +151,12 @@ void setup() {
   leds[briled].b = (255 - WHITELEDSTATE)/2;               // set briled pixel to initial value
   leds[briled].g = 0;
   leds[briled].r = WHITELEDSTATE/2; 
-  leds[batled].b = 55;                                    // set barled pixel to initial value
-  leds[batled].g = 55;
-  leds[batled].r = 0; 
   FastLED.show();
-
-  // setup pixels (bgr!)
-  LEDS.addLeds<LED_TYPE, LED_DT, LED_CK, COLOR_ORDER>(leds, NUM_LEDS);  //WS2801 and APA102
-  FastLED.setBrightness(max_bright);
-  currentPalette = OceanColors_p;
 
   // Start the OLED
   u8g2.begin();
+
+  
 
   // Show Voltage / Brightness on display
   BATDISP();                             
@@ -144,6 +185,29 @@ void setup() {
 void loop() {
 
  zoled.run();                         // start timer
+
+  // IMU Interrupt routine 
+  if( int1Status > 0 )  //If ISR has been serviced at least once
+    {
+      //Wait for a window (in case a second tap is coming)
+      delay(300);
+      
+      //Check if there are more than one interrupt pulse
+      if( int1Status == 1 ) // single tap
+      {
+
+      BATDISP();
+      }
+      if( int1Status > 1 )  // double tap
+      {
+      FLASH();
+      }    
+      //Clear the ISR counter
+      int1Status = 0;
+    
+  }
+  //IMU Interrupt routine END
+
 
   // Button UP routine
   int up_reading = digitalRead(BUTTON_UP);
@@ -204,12 +268,11 @@ void loop() {
 
   if (WHITELEDSTATE == 0){
    while (true){
-
-    u8g2.setPowerSave(0);                                     // wake  up display
-    u8g2.setFont(u8g2_font_ncenB08_tr);               // u8g2_font_ncenB08_tr ,
-    u8g2.clearBuffer();
-    u8g2.drawStr(0,8,"PLASMA !!! ");
-    u8g2.sendBuffer();
+//    u8g2.setPowerSave(0);                                     // wake  up display
+//    u8g2.setFont(u8g2_font_ncenB08_tr);               // u8g2_font_ncenB08_tr ,
+//    u8g2.clearBuffer();
+//    u8g2.drawStr(0,8,"PLASMA !!! ");
+//    u8g2.sendBuffer();
     
     EVERY_N_MILLISECONDS(25) {                                  // FastLED based non-blocking delay to update/display the sequence.
       plasma();
@@ -331,20 +394,13 @@ void WHITELEDSTATE_DOWN() {
 
 //OLED voltage and brightness
 void BATDISP(){                                             // all these values depend on the load and all the electronic components in the way, so .. its a vague approximation at best
- 
+  int celsius = myIMU.readTempC();
   uint16_t mv = readVcc();                                  // check voltage under load !
-  float xpercent = (float)WHITELEDSTATE / PWMLIMIT * 100;   // calculate brightness in percent
- 
-  u8g2.setPowerSave(0);                                     // wake  up display
-  u8g2.setFont(u8g2_font_ncenB08_tr);                       // u8g2_font_ncenB08_tr ,
-  u8g2.clearBuffer();  
-  u8g2.drawStr(0,8,"Brightness: ");
-  u8g2.setCursor(82, 8);
-  u8g2.print(xpercent);                                     // print brightness
-  u8g2.drawStr(0,20,"Voltage: ");
-  u8g2.setCursor(82, 20);
-  u8g2.print(mv);                                           // print voltage
-  u8g2.sendBuffer();
+  float xpercent = (float) WHITELEDSTATE / PWMLIMIT * 100;   // calculate brightness in percent
+  uint16_t uv = mv - 2700;
+  uint16_t dv = 1500;
+
+  float batpercent = (float) uv / dv * 100;
 
   if (mv < 2700){                                           
       leds[batled].b = 0;
@@ -385,6 +441,29 @@ void BATDISP(){                                             // all these values 
   }    
   FastLED.show();
 
+
+ 
+  u8g2.setPowerSave(0);                                     // wake  up display
+  u8g2.setFont(u8g2_font_ncenB08_tr);                       // u8g2_font_ncenB08_tr ,
+  u8g2.clearBuffer();  
+  u8g2.drawFrame(12,0,100,4);
+  for (int p=0; p<xpercent; p++) {                          // Brightness bar
+    u8g2.drawVLine(12+p, 1, 2);
+  }
+  u8g2.drawStr(12,14,"Temperatur: ");
+  u8g2.setCursor(82, 14);
+  u8g2.print(celsius);                                     // print brightness in percent
+  u8g2.drawStr(100,14,"°C");
+  u8g2.drawStr(12,24,"Voltage: ");
+  u8g2.setCursor(82, 24);
+  u8g2.print(mv);                                           // print voltage in mV
+  u8g2.drawFrame(12,27,100,4);
+  for (int b=0; b<batpercent; b++) {
+    u8g2.drawVLine(12+b, 28, 2);
+  }
+  u8g2.sendBuffer();
+
+
 }
 
 // Nice plasma on the pixels please ! 
@@ -410,10 +489,15 @@ void READBOOK() {
     leds[batled].g = 0;
     leds[batled].r = 0;   
     FastLED.show();
+    BATDISP();
+
 }
 
 // (the flash is a remnant of ledside without driver, so ... maybe there will be a flash driver, so its still here)
+
 void FLASH(){
+
+  
   uint8_t  FLASHLEDSTATE = PWMLIMIT;
   uint16_t  mv = readVcc();             
   analogWrite(WHITELED, FLASHLEDSTATE);
@@ -427,6 +511,8 @@ void FLASH(){
     leds[briled].g = 0;
     leds[briled].r = WHITELEDSTATE;   
   FastLED.show();
+
+
 }
 
 // EOF  finally !
