@@ -1,11 +1,11 @@
 _Revision 17 changes_
 
-_ LEDSIDE _
+LEDSIDE
 - added LED Driver dio5661
 - removed temp ntc
 - routed pwm through 2 pin header (standoffs and screws only carry VCC and GND now)
 
-_ ESIDE _
+ESIDE
 - removed NTC network
 - routed pwm though 2 pin header
 - added OLED (0.91" 128x32 ssd1306)
@@ -16,6 +16,6 @@ _ ESIDE _
 - changed µC to atmega328-p with qfn-32 footprint
 - changed lithium charge management to dio5158
 
-_ TODO _
+TODO
 - create frames and buttons in blender
 
