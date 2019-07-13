@@ -1,4 +1,4 @@
-_Revision 17 changes_
+___REV17 changes___
 
 LEDSIDE
 - added LED Driver dio5661
@@ -7,6 +7,7 @@ LEDSIDE
 
 ESIDE
 - removed NTC network
+- added cap ref -> GND
 - routed pwm though 2 pin header
 - added OLED (0.91" 128x32 ssd1306)
 - added IMU  (LSM6D3) ... somebody write tap detection for me please !?
@@ -18,4 +19,4 @@ ESIDE
 
 TODO
 - create frames and buttons in blender
-
+- create BOM
