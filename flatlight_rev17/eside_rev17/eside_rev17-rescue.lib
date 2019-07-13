@@ -1,0 +1,141 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# C_Small-modular_eside_rev14-rescue
+#
+DEF C_Small-modular_eside_rev14-rescue C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "C_Small-modular_eside_rev14-rescue" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 13 -60 -20 60 -20 N
+P 2 0 1 12 -60 20 60 20 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# LL4148-modular_eside_rev14-rescue
+#
+DEF LL4148-modular_eside_rev14-rescue D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "LL4148-modular_eside_rev14-rescue" 0 -100 50 H V C CNN
+F2 "Diodes_SMD:MiniMELF_Standard" 0 -175 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ D*MiniMELF*
+ MiniMELF*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 50 -50 -50 N
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# LSM6DS3TR-modular_eside_rev14-rescue
+#
+DEF LSM6DS3TR-modular_eside_rev14-rescue U 0 40 Y Y 1 F N
+F0 "U" -250 450 60 H V C CNN
+F1 "LSM6DS3TR-modular_eside_rev14-rescue" 450 -700 60 H V C CNN
+F2 "digikey-footprints:LGA-14L_2.5x3mm__LSM6DS3" 200 200 60 H I L CNN
+F3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/a3/f5/4f/ae/8e/44/41/d7/DM00133076.pdf/files/DM00133076.pdf/jcr:content/translations/en.DM00133076.pdf" 200 300 60 H I L CNN
+F4 "497-15383-1-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "LSM6DS3TR" 200 500 60 H I L CNN "MPN"
+F6 "Sensors, Transducers" 200 600 60 H I L CNN "Category"
+F7 "Motion Sensors - IMUs (Inertial Measurement Units)" 200 700 60 H I L CNN "Family"
+F8 "http://www.st.com/content/ccc/resource/technical/document/datasheet/a3/f5/4f/ae/8e/44/41/d7/DM00133076.pdf/files/DM00133076.pdf/jcr:content/translations/en.DM00133076.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/stmicroelectronics/LSM6DS3TR/497-15383-1-ND/5180534" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "IMU ACCEL/GYRO I2C/SPI 14VFLGA" 200 1000 60 H I L CNN "Description"
+F11 "STMicroelectronics" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+S -300 400 400 -600 0 1 0 f
+X SDO/SA0 1 600 300 200 L 50 50 1 0 P
+X NC 10 600 -400 200 L 50 50 1 0 N
+X NC 11 600 -500 200 L 50 50 1 0 N
+X CS 12 -500 200 200 R 50 50 1 0 I
+X SCL 13 -500 100 200 R 50 50 1 0 I
+X SDA 14 600 -200 200 L 50 50 1 0 B
+X SDx 2 600 200 200 L 50 50 1 0 P
+X SCx 3 600 100 200 L 50 50 1 0 P
+X INT1 4 600 0 200 L 50 50 1 0 O
+X VDDIO 5 600 -300 200 L 50 50 1 0 W
+X GND 6 -100 -800 200 U 50 50 1 0 W
+X GND 7 0 -800 200 U 50 50 1 0 W
+X VDD 8 -100 600 200 D 50 50 1 0 W
+X INT2 9 600 -100 200 L 50 50 1 0 O
+ENDDRAW
+ENDDEF
+#
+# modular_eside_rev10-rescue_+3.3V-RESCUE-modular_eside_rev10-modular_eside_rev14-rescue
+#
+DEF modular_eside_rev10-rescue_+3.3V-RESCUE-modular_eside_rev10-modular_eside_rev14-rescue #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "modular_eside_rev10-rescue_+3.3V-RESCUE-modular_eside_rev10-modular_eside_rev14-rescue" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# modular_eside_rev10-rescue_C-RESCUE-modular_eside_rev10-modular_eside_rev14-rescue
+#
+DEF modular_eside_rev10-rescue_C-RESCUE-modular_eside_rev10-modular_eside_rev14-rescue C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "modular_eside_rev10-rescue_C-RESCUE-modular_eside_rev10-modular_eside_rev14-rescue" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# modular_eside_rev10-rescue_GND-RESCUE-modular_eside_rev10-modular_eside_rev14-rescue
+#
+DEF modular_eside_rev10-rescue_GND-RESCUE-modular_eside_rev10-modular_eside_rev14-rescue #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "modular_eside_rev10-rescue_GND-RESCUE-modular_eside_rev10-modular_eside_rev14-rescue" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# modular_eside_rev10-rescue_R-RESCUE-modular_eside_rev10-modular_eside_rev14-rescue
+#
+DEF modular_eside_rev10-rescue_R-RESCUE-modular_eside_rev10-modular_eside_rev14-rescue R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "modular_eside_rev10-rescue_R-RESCUE-modular_eside_rev10-modular_eside_rev14-rescue" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library
