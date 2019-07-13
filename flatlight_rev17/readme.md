@@ -20,3 +20,4 @@ ESIDE
 TODO
 - create frames and buttons in blender
 - create BOM
+- correct pin orientation for 2 pin header (pwm signal) on ledside !!!!
