@@ -18,6 +18,5 @@ ESIDE
 - changed lithium charge management to dio5158
 
 TODO
-- create frames and buttons in blender
 - create BOM
 - correct pin orientation for 2 pin header (pwm signal) on ledside !!!!
