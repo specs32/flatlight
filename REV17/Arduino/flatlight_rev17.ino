@@ -17,8 +17,6 @@
 
 // TEMP
 
-
-
  
 // Use qsuba for smooth pixel colouring and qsubd for non-smooth pixel colouring
 #define qsubd(x, b)  ((x>b)?b:0)                              // Digital unsigned subtraction macro. if result <0, then => 0. Otherwise, take on fixed value.
@@ -107,34 +105,23 @@ void setup() {
   uint8_t errorAccumulator = 0;
   uint8_t dataToWrite = 0;  //Temporary variable
 
-  //Setup the accelerometer******************************
+  //Setup the accelerometer sparkfun
   dataToWrite = 0; //Start Fresh!
   dataToWrite |= LSM6DS3_ACC_GYRO_BW_XL_200Hz;
   dataToWrite |= LSM6DS3_ACC_GYRO_FS_XL_2g;
   dataToWrite |= LSM6DS3_ACC_GYRO_ODR_XL_416Hz;
 
-  // //Now, write the patched together data
   errorAccumulator += myIMU.writeRegister(LSM6DS3_ACC_GYRO_CTRL1_XL, dataToWrite);
-  //Set the ODR bit
   errorAccumulator += myIMU.readRegister(&dataToWrite, LSM6DS3_ACC_GYRO_CTRL4_C);
   dataToWrite &= ~((uint8_t)LSM6DS3_ACC_GYRO_BW_SCAL_ODR_ENABLED);
-  // Enable tap detection on X, Y, Z axis, but do not latch output
-  errorAccumulator += myIMU.writeRegister( LSM6DS3_ACC_GYRO_TAP_CFG1, 0x0E );
-   // Set tap threshold
-  // Write 0Ch into TAP_THS_6D
-  errorAccumulator += myIMU.writeRegister( LSM6DS3_ACC_GYRO_TAP_THS_6D, 0x03 );
-  // Set Duration, Quiet and Shock time windows
-  // Write 7Fh into INT_DUR2
+  errorAccumulator += myIMU.writeRegister( LSM6DS3_ACC_GYRO_TAP_CFG1, 0x02 );
+  errorAccumulator += myIMU.writeRegister( LSM6DS3_ACC_GYRO_TAP_THS_6D, 0x05 );
   errorAccumulator += myIMU.writeRegister( LSM6DS3_ACC_GYRO_INT_DUR2, 0x7F );
-   // Single & Double tap enabled (SINGLE_DOUBLE_TAP = 1)
-  // Write 80h into WAKE_UP_THS
   errorAccumulator += myIMU.writeRegister( LSM6DS3_ACC_GYRO_WAKE_UP_THS, 0x80 );
-  // Single tap interrupt driven to INT1 pin -- enable latch
-  // Write 08h into MD1_CFG
   errorAccumulator += myIMU.writeRegister( LSM6DS3_ACC_GYRO_MD1_CFG, 0x48 );
 
-  pinMode(int1Pin, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(int1Pin), int1ISR, RISING);
+  pinMode(int1Pin, INPUT_PULLUP);                                       // didn't place an external
+  attachInterrupt(digitalPinToInterrupt(int1Pin), int1ISR, RISING);     // digitalPinToInterrupt()
 
   // setup pixels (bgr!)
   LEDS.addLeds<LED_TYPE, LED_DT, LED_CK, COLOR_ORDER>(leds, NUM_LEDS);  //WS2801 and APA102
@@ -176,35 +163,22 @@ void setup() {
 //  TCCR1A =  _BV(COM1A1) | _BV(WGM11);
 //  TCCR1B = _BV(CS10) | _BV(WGM12);
 
-
-
 } // setup end
-
-
 
 void loop() {
 
  zoled.run();                         // start timer
 
   // IMU Interrupt routine 
-  if( int1Status > 0 )  //If ISR has been serviced at least once
-    {
-      //Wait for a window (in case a second tap is coming)
+  if( int1Status > 0 ) {
       delay(300);
-      
-      //Check if there are more than one interrupt pulse
-      if( int1Status == 1 ) // single tap
-      {
-
+      if( int1Status == 1 ) {
       BATDISP();
       }
-      if( int1Status > 1 )  // double tap
-      {
+      if( int1Status > 1 )  {
       FLASH();
       }    
-      //Clear the ISR counter
-      int1Status = 0;
-    
+      int1Status = 0; 
   }
   //IMU Interrupt routine END
 
@@ -268,11 +242,7 @@ void loop() {
 
   if (WHITELEDSTATE == 0){
    while (true){
-//    u8g2.setPowerSave(0);                                     // wake  up display
-//    u8g2.setFont(u8g2_font_ncenB08_tr);               // u8g2_font_ncenB08_tr ,
-//    u8g2.clearBuffer();
-//    u8g2.drawStr(0,8,"PLASMA !!! ");
-//    u8g2.sendBuffer();
+    u8g2.setPowerSave(1);                                     // 
     
     EVERY_N_MILLISECONDS(25) {                                  // FastLED based non-blocking delay to update/display the sequence.
       plasma();
@@ -444,19 +414,21 @@ void BATDISP(){                                             // all these values 
 
  
   u8g2.setPowerSave(0);                                     // wake  up display
-  u8g2.setFont(u8g2_font_ncenB08_tr);                       // u8g2_font_ncenB08_tr ,
+  u8g2.setFont(u8g2_font_tenthinnerguys_t_all);                       // u8g2_font_ncenB08_tr ,
   u8g2.clearBuffer();  
   u8g2.drawFrame(12,0,100,4);
   for (int p=0; p<xpercent; p++) {                          // Brightness bar
     u8g2.drawVLine(12+p, 1, 2);
   }
-  u8g2.drawStr(12,14,"Temperatur: ");
-  u8g2.setCursor(82, 14);
-  u8g2.print(celsius);                                     // print brightness in percent
-  u8g2.drawStr(100,14,"°C");
+  u8g2.drawStr(12,14,"Temp:");
+  u8g2.setCursor(65, 14);
+  u8g2.print(celsius);                                     // 
+  u8g2.drawUTF8(95,14,"°C");
   u8g2.drawStr(12,24,"Voltage: ");
-  u8g2.setCursor(82, 24);
-  u8g2.print(mv);                                           // print voltage in mV
+  u8g2.setCursor(65, 24);
+  u8g2.print(mv);                                           // 
+  u8g2.drawStr(95,24,"mV");
+
   u8g2.drawFrame(12,27,100,4);
   for (int b=0; b<batpercent; b++) {
     u8g2.drawVLine(12+b, 28, 2);
