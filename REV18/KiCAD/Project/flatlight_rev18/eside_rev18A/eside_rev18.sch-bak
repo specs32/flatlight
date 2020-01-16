@@ -1340,7 +1340,7 @@ U 1 1 5DFA373C
 P 11280 2180
 F 0 "logo4" H 11358 2301 50  0000 L CNN
 F 1 "logo-heart2" H 11358 2210 50  0000 L CNN
-F 2 "lt_foots:logo_heart2" H 11280 2180 50  0001 C CNN
+F 2 "lt_foots:logo_heart3" H 11280 2180 50  0001 C CNN
 F 3 "" H 11280 2180 50  0001 C CNN
 	1    11280 2180
 	1    0    0    -1  
