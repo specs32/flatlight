@@ -1,0 +1,18 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"D4,D3,D2,D1";"LED_Cree-XP-G";4;"LED_PAD";;;
+2;"R3,R4";"R_0603_1608Metric_Pad1.05x0.95mm_HandSolder";2;"NTC 10 kΩ";;;
+3;"R1,R2";"R_0603_1608Metric_Pad1.05x0.95mm_HandSolder";2;"10 kΩ";;;
+4;"logo7";"logo_flatlight_git_silk";1;"logo_flatlight_git";;;
+5;"logo2";"logo_horse";1;"logo_horse";;;
+6;"R6,R8";"R_0603_1608Metric_Pad1.05x0.95mm_HandSolder";2;"1MΩ";;;
+7;"TP1,TP2";"TestPoint_Pad_1.5x1.5mm";2;"TestPoint";;;
+8;"R5,R7";"R_0603_1608Metric_Pad1.05x0.95mm_HandSolder";2;"1kΩ";;;
+9;"Q1,Q2";"U-DFN2020-6 (Type F)";2;"DMN2022-UFDF7";;;
+10;"D16,D15,D14,D13,D12,D11,D10,D9";"LED_Cree-J-Series";8;"LED";;;
+11;"logo6";"logo_REV18";1;"logo_REV18";;;
+12;"logo3";"cc-by-sa";1;"logo-cc-by-sa";;;
+13;"J1";"PinHeader_1x04_P2.00mm_Vertical";1;"Conn_01x04";;;
+14;"H6,H5,H4,H3,H2,H1";"MountingHole_2.2mm_M2_Pad_Via";6;"MountingHole_Pad";;;
+15;"logo1";"logo_heart3";1;"logo_heart";;;
+16;"logo5";"logo_flatlight";1;"logo_flatlight";;;
+17;"logo4";"logo_lightwarn_15mm";1;"logo_LIGHTWARN";;;

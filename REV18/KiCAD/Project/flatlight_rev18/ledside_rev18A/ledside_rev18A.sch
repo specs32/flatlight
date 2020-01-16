@@ -1,0 +1,698 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Mechanical:MountingHole_Pad H5
+U 1 1 5D0ECB30
+P 880 800
+F 0 "H5" H 980 849 50  0000 L CNN
+F 1 "MountingHole_Pad" H 980 758 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 880 800 50  0001 C CNN
+F 3 "~" H 880 800 50  0001 C CNN
+	1    880  800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H6
+U 1 1 5D0ECD37
+P 1780 800
+F 0 "H6" H 1880 849 50  0000 L CNN
+F 1 "MountingHole_Pad" H 1880 758 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 1780 800 50  0001 C CNN
+F 3 "~" H 1780 800 50  0001 C CNN
+	1    1780 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5D0ECF1F
+P 2780 785
+F 0 "H3" H 2880 834 50  0000 L CNN
+F 1 "MountingHole_Pad" H 2880 743 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 2780 785 50  0001 C CNN
+F 3 "~" H 2780 785 50  0001 C CNN
+	1    2780 785 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 5D0ECF29
+P 3680 785
+F 0 "H4" H 3780 834 50  0000 L CNN
+F 1 "MountingHole_Pad" H 3780 743 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 3680 785 50  0001 C CNN
+F 3 "~" H 3680 785 50  0001 C CNN
+	1    3680 785 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR04
+U 1 1 5D0EF3BD
+P 3680 885
+F 0 "#PWR04" H 3680 735 50  0001 C CNN
+F 1 "VCC" H 3698 1058 50  0000 C CNN
+F 2 "" H 3680 885 50  0001 C CNN
+F 3 "" H 3680 885 50  0001 C CNN
+	1    3680 885 
+	-1   0    0    1   
+$EndComp
+$Comp
+L nicos-parts:logo-cc-by-sa logo3
+U 1 1 5D0C416D
+P 2850 1570
+F 0 "logo3" H 2928 1691 50  0000 L CNN
+F 1 "logo-cc-by-sa" H 2928 1600 50  0000 L CNN
+F 2 "lt_foots:cc-by-sa" H 2850 1570 50  0001 C CNN
+F 3 "" H 2850 1570 50  0001 C CNN
+	1    2850 1570
+	1    0    0    -1  
+$EndComp
+$Comp
+L nicos-parts:logo_contact logo4
+U 1 1 5D0C482A
+P 2000 1575
+F 0 "logo4" H 2028 1696 50  0000 L CNN
+F 1 "logo_LIGHTWARN" H 2028 1605 50  0000 L CNN
+F 2 "lt_foots:logo_lightwarn_15mm" H 2000 1575 50  0001 C CNN
+F 3 "" H 2000 1575 50  0001 C CNN
+	1    2000 1575
+	1    0    0    -1  
+$EndComp
+Text GLabel 1060 1715 2    50   Input ~ 0
+OC1B
+$Comp
+L power:GND #PWR05
+U 1 1 5D21978B
+P 880 900
+F 0 "#PWR05" H 880 650 50  0001 C CNN
+F 1 "GND" H 885 727 50  0000 C CNN
+F 2 "" H 880 900 50  0001 C CNN
+F 3 "" H 880 900 50  0001 C CNN
+	1    880  900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5D1FDE78
+P 1780 900
+F 0 "#PWR06" H 1780 650 50  0001 C CNN
+F 1 "GND" H 1785 727 50  0000 C CNN
+F 2 "" H 1780 900 50  0001 C CNN
+F 3 "" H 1780 900 50  0001 C CNN
+	1    1780 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L nicos-parts:logo_contact logo5
+U 1 1 5D217A0B
+P 2900 1820
+F 0 "logo5" H 2928 1941 50  0000 L CNN
+F 1 "logo_flatlight" H 2928 1850 50  0000 L CNN
+F 2 "lt_foots:logo_flatlight" H 2900 1820 50  0001 C CNN
+F 3 "" H 2900 1820 50  0001 C CNN
+	1    2900 1820
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5DFC7C77
+P 4630 765
+F 0 "H1" H 4730 814 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4730 723 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 4630 765 50  0001 C CNN
+F 3 "~" H 4630 765 50  0001 C CNN
+	1    4630 765 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5DFC7C81
+P 5530 765
+F 0 "H2" H 5630 814 50  0000 L CNN
+F 1 "MountingHole_Pad" H 5630 723 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 5530 765 50  0001 C CNN
+F 3 "~" H 5530 765 50  0001 C CNN
+	1    5530 765 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5DFC7C8B
+P 4630 865
+F 0 "#PWR01" H 4630 615 50  0001 C CNN
+F 1 "GND" H 4635 692 50  0000 C CNN
+F 2 "" H 4630 865 50  0001 C CNN
+F 3 "" H 4630 865 50  0001 C CNN
+	1    4630 865 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5DFC7C95
+P 5530 865
+F 0 "#PWR02" H 5530 615 50  0001 C CNN
+F 1 "GND" H 5535 692 50  0000 C CNN
+F 2 "" H 5530 865 50  0001 C CNN
+F 3 "" H 5530 865 50  0001 C CNN
+	1    5530 865 
+	1    0    0    -1  
+$EndComp
+Text GLabel 1060 1815 2    50   Input ~ 0
+OC1A
+Text GLabel 1125 3985 0    50   Input ~ 0
+OC1A
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5E06B8DD
+P 860 1815
+F 0 "J1" H 778 1390 50  0000 C CNN
+F 1 "Conn_01x04" H 778 1481 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Vertical" H 860 1815 50  0001 C CNN
+F 3 "~" H 860 1815 50  0001 C CNN
+	1    860  1815
+	-1   0    0    1   
+$EndComp
+Text GLabel 1125 5255 0    50   Input ~ 0
+OC1B
+$Comp
+L nicos-parts:logo_contact logo2
+U 1 1 5E07F31B
+P 3950 1565
+F 0 "logo2" H 3978 1686 50  0000 L CNN
+F 1 "logo_horse" H 3978 1595 50  0000 L CNN
+F 2 "lt_foots:logo_horse" H 3950 1565 50  0001 C CNN
+F 3 "" H 3950 1565 50  0001 C CNN
+	1    3950 1565
+	1    0    0    -1  
+$EndComp
+$Comp
+L nicos-parts:logo_contact logo6
+U 1 1 5E07FE20
+P 3950 1820
+F 0 "logo6" H 3978 1941 50  0000 L CNN
+F 1 "logo_REV18" H 3978 1850 50  0000 L CNN
+F 2 "lt_foots:logo_REV18" H 3950 1820 50  0001 C CNN
+F 3 "" H 3950 1820 50  0001 C CNN
+	1    3950 1820
+	1    0    0    -1  
+$EndComp
+$Comp
+L nicos-parts:logo_contact logo1
+U 1 1 5E087109
+P 4585 1560
+F 0 "logo1" H 4613 1681 50  0000 L CNN
+F 1 "logo_heart" H 4613 1590 50  0000 L CNN
+F 2 "lt_foots:logo_heart3" H 4585 1560 50  0001 C CNN
+F 3 "" H 4585 1560 50  0001 C CNN
+	1    4585 1560
+	1    0    0    -1  
+$EndComp
+$Comp
+L nicos-parts:logo_contact logo7
+U 1 1 5D0C4F29
+P 2000 1825
+F 0 "logo7" H 2028 1946 50  0000 L CNN
+F 1 "logo_flatlight_git" H 2028 1855 50  0000 L CNN
+F 2 "lt_foots:logo_flatlight_git_silk" H 2000 1825 50  0001 C CNN
+F 3 "" H 2000 1825 50  0001 C CNN
+	1    2000 1825
+	1    0    0    -1  
+$EndComp
+$Comp
+L nicos-parts:DMN2022-UFDF7 Q1
+U 1 1 5E0963FD
+P 1625 3985
+F 0 "Q1" H 1829 4031 50  0000 L CNN
+F 1 "DMN2022-UFDF7" H 1829 3940 50  0000 L CNN
+F 2 "lt_foots:U-DFN2020-6 (Type F)" H 1825 3910 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 1625 3985 50  0001 L CNN
+	1    1625 3985
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5E098284
+P 1275 3985
+F 0 "R5" V 1350 4050 50  0000 C CNN
+F 1 "1kΩ" V 1270 3980 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1205 3985 50  0001 C CNN
+F 3 "~" H 1275 3985 50  0001 C CNN
+	1    1275 3985
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E09871E
+P 925 2485
+F 0 "R2" H 995 2531 50  0000 L CNN
+F 1 "10 kΩ" H 995 2440 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 855 2485 50  0001 C CNN
+F 3 "~" H 925 2485 50  0001 C CNN
+	1    925  2485
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5E098728
+P 925 2785
+F 0 "R4" H 995 2831 50  0000 L CNN
+F 1 "NTC 10 kΩ" H 995 2740 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 855 2785 50  0001 C CNN
+F 3 "~" H 925 2785 50  0001 C CNN
+	1    925  2785
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5E099342
+P 1725 3785
+F 0 "TP1" V 1720 3960 50  0000 L CNN
+F 1 "TestPoint" V 1855 4085 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 1925 3785 50  0001 C CNN
+F 3 "~" H 1925 3785 50  0001 C CNN
+	1    1725 3785
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 5E0AFEBA
+P 1725 4185
+F 0 "#PWR012" H 1725 3935 50  0001 C CNN
+F 1 "GND" H 1730 4012 50  0000 C CNN
+F 2 "" H 1725 4185 50  0001 C CNN
+F 3 "" H 1725 4185 50  0001 C CNN
+	1    1725 4185
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5E0B350F
+P 925 2935
+F 0 "#PWR010" H 925 2685 50  0001 C CNN
+F 1 "GND" H 930 2762 50  0000 C CNN
+F 2 "" H 925 2935 50  0001 C CNN
+F 3 "" H 925 2935 50  0001 C CNN
+	1    925  2935
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR08
+U 1 1 5E0B4053
+P 925 2335
+F 0 "#PWR08" H 925 2185 50  0001 C CNN
+F 1 "VCC" H 942 2508 50  0000 C CNN
+F 2 "" H 925 2335 50  0001 C CNN
+F 3 "" H 925 2335 50  0001 C CNN
+	1    925  2335
+	1    0    0    -1  
+$EndComp
+Connection ~ 1725 3785
+$Comp
+L power:VCC #PWR011
+U 1 1 5E0C7BC0
+P 1725 3485
+F 0 "#PWR011" H 1725 3335 50  0001 C CNN
+F 1 "VCC" H 1742 3658 50  0000 C CNN
+F 2 "" H 1725 3485 50  0001 C CNN
+F 3 "" H 1725 3485 50  0001 C CNN
+	1    1725 3485
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D14
+U 1 1 5E0D27FB
+P 3295 4905
+F 0 "D14" H 3288 5121 50  0000 C CNN
+F 1 "LED" H 3288 5030 50  0000 C CNN
+F 2 "lt_foots:LED_Cree-J-Series" H 3295 4905 50  0001 C CNN
+F 3 "~" H 3295 4905 50  0001 C CNN
+	1    3295 4905
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D11
+U 1 1 5E0D2805
+P 2340 4905
+F 0 "D11" H 2333 5121 50  0000 C CNN
+F 1 "LED" H 2333 5030 50  0000 C CNN
+F 2 "lt_foots:LED_Cree-J-Series" H 2340 4905 50  0001 C CNN
+F 3 "~" H 2340 4905 50  0001 C CNN
+	1    2340 4905
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D13
+U 1 1 5E0D2819
+P 2980 4905
+F 0 "D13" H 2973 5121 50  0000 C CNN
+F 1 "LED" H 2973 5030 50  0000 C CNN
+F 2 "lt_foots:LED_Cree-J-Series" H 2980 4905 50  0001 C CNN
+F 3 "~" H 2980 4905 50  0001 C CNN
+	1    2980 4905
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D10
+U 1 1 5E0D2823
+P 2030 4905
+F 0 "D10" H 2023 5121 50  0000 C CNN
+F 1 "LED" H 2023 5030 50  0000 C CNN
+F 2 "lt_foots:LED_Cree-J-Series" H 2030 4905 50  0001 C CNN
+F 3 "~" H 2030 4905 50  0001 C CNN
+	1    2030 4905
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D12
+U 1 1 5E0D2837
+P 2660 4905
+F 0 "D12" H 2653 5121 50  0000 C CNN
+F 1 "LED" H 2653 5030 50  0000 C CNN
+F 2 "lt_foots:LED_Cree-J-Series" H 2660 4905 50  0001 C CNN
+F 3 "~" H 2660 4905 50  0001 C CNN
+	1    2660 4905
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D9
+U 1 1 5E0D2841
+P 1725 4905
+F 0 "D9" H 1718 5121 50  0000 C CNN
+F 1 "LED" H 1718 5030 50  0000 C CNN
+F 2 "lt_foots:LED_Cree-J-Series" H 1725 4905 50  0001 C CNN
+F 3 "~" H 1725 4905 50  0001 C CNN
+	1    1725 4905
+	0    -1   -1   0   
+$EndComp
+$Comp
+L nicos-parts:DMN2022-UFDF7 Q2
+U 1 1 5E0D2855
+P 1625 5255
+F 0 "Q2" H 1829 5301 50  0000 L CNN
+F 1 "DMN2022-UFDF7" H 1829 5210 50  0000 L CNN
+F 2 "lt_foots:U-DFN2020-6 (Type F)" H 1825 5180 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 1625 5255 50  0001 L CNN
+	1    1625 5255
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5E0D285F
+P 1275 5255
+F 0 "R7" V 1350 5320 50  0000 C CNN
+F 1 "1kΩ" V 1270 5250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1205 5255 50  0001 C CNN
+F 3 "~" H 1275 5255 50  0001 C CNN
+	1    1275 5255
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5E0D2869
+P 1725 5055
+F 0 "TP2" V 1720 5230 50  0000 L CNN
+F 1 "TestPoint" V 1855 5355 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 1925 5055 50  0001 C CNN
+F 3 "~" H 1925 5055 50  0001 C CNN
+	1    1725 5055
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5E0D2873
+P 1725 5455
+F 0 "#PWR015" H 1725 5205 50  0001 C CNN
+F 1 "GND" H 1730 5282 50  0000 C CNN
+F 2 "" H 1725 5455 50  0001 C CNN
+F 3 "" H 1725 5455 50  0001 C CNN
+	1    1725 5455
+	1    0    0    -1  
+$EndComp
+Connection ~ 1725 5055
+$Comp
+L power:VCC #PWR014
+U 1 1 5E0D287E
+P 1725 4755
+F 0 "#PWR014" H 1725 4605 50  0001 C CNN
+F 1 "VCC" H 1742 4928 50  0000 C CNN
+F 2 "" H 1725 4755 50  0001 C CNN
+F 3 "" H 1725 4755 50  0001 C CNN
+	1    1725 4755
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1725 4755 2030 4755
+Connection ~ 2030 4755
+Connection ~ 2340 4755
+Wire Wire Line
+	2030 4755 2340 4755
+Wire Wire Line
+	2340 4755 2660 4755
+Connection ~ 2660 4755
+Wire Wire Line
+	2660 4755 2980 4755
+Connection ~ 2980 4755
+Wire Wire Line
+	2980 4755 3295 4755
+Wire Wire Line
+	1725 5055 2030 5055
+Connection ~ 2030 5055
+Wire Wire Line
+	2030 5055 2340 5055
+Connection ~ 2340 5055
+Wire Wire Line
+	2340 5055 2660 5055
+Connection ~ 2660 5055
+Wire Wire Line
+	2660 5055 2980 5055
+Connection ~ 2980 5055
+Wire Wire Line
+	2980 5055 3295 5055
+Connection ~ 1725 4755
+$Comp
+L Device:R R8
+U 1 1 5E10AFFB
+P 1425 5405
+F 0 "R8" V 1500 5470 50  0000 C CNN
+F 1 "1MΩ" V 1420 5400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1355 5405 50  0001 C CNN
+F 3 "~" H 1425 5405 50  0001 C CNN
+	1    1425 5405
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 5E10C6C7
+P 1425 5555
+F 0 "#PWR016" H 1425 5305 50  0001 C CNN
+F 1 "GND" H 1430 5382 50  0000 C CNN
+F 2 "" H 1425 5555 50  0001 C CNN
+F 3 "" H 1425 5555 50  0001 C CNN
+	1    1425 5555
+	1    0    0    -1  
+$EndComp
+Connection ~ 1425 5255
+$Comp
+L Device:R R6
+U 1 1 5E10E3FA
+P 1425 4135
+F 0 "R6" V 1500 4200 50  0000 C CNN
+F 1 "1MΩ" V 1420 4130 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1355 4135 50  0001 C CNN
+F 3 "~" H 1425 4135 50  0001 C CNN
+	1    1425 4135
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5E10E404
+P 1425 4285
+F 0 "#PWR013" H 1425 4035 50  0001 C CNN
+F 1 "GND" H 1430 4112 50  0000 C CNN
+F 2 "" H 1425 4285 50  0001 C CNN
+F 3 "" H 1425 4285 50  0001 C CNN
+	1    1425 4285
+	1    0    0    -1  
+$EndComp
+Connection ~ 1425 3985
+$Comp
+L power:VCC #PWR03
+U 1 1 5DFB6176
+P 2780 885
+F 0 "#PWR03" H 2780 735 50  0001 C CNN
+F 1 "VCC" H 2798 1058 50  0000 C CNN
+F 2 "" H 2780 885 50  0001 C CNN
+F 3 "" H 2780 885 50  0001 C CNN
+	1    2780 885 
+	-1   0    0    1   
+$EndComp
+Text GLabel 1060 1615 2    50   Input ~ 0
+LED_NTC2
+Text GLabel 925  2635 2    50   Input ~ 0
+LED_NTC1
+Text GLabel 1715 2630 2    50   Input ~ 0
+LED_NTC2
+$Comp
+L Device:R R1
+U 1 1 5DFD9CD4
+P 1715 2480
+F 0 "R1" H 1785 2526 50  0000 L CNN
+F 1 "10 kΩ" H 1785 2435 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1645 2480 50  0001 C CNN
+F 3 "~" H 1715 2480 50  0001 C CNN
+	1    1715 2480
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5DFD9CDE
+P 1715 2780
+F 0 "R3" H 1785 2826 50  0000 L CNN
+F 1 "NTC 10 kΩ" H 1785 2735 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1645 2780 50  0001 C CNN
+F 3 "~" H 1715 2780 50  0001 C CNN
+	1    1715 2780
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5DFD9CE8
+P 1715 2930
+F 0 "#PWR09" H 1715 2680 50  0001 C CNN
+F 1 "GND" H 1720 2757 50  0000 C CNN
+F 2 "" H 1715 2930 50  0001 C CNN
+F 3 "" H 1715 2930 50  0001 C CNN
+	1    1715 2930
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR07
+U 1 1 5DFD9CF2
+P 1715 2330
+F 0 "#PWR07" H 1715 2180 50  0001 C CNN
+F 1 "VCC" H 1732 2503 50  0000 C CNN
+F 2 "" H 1715 2330 50  0001 C CNN
+F 3 "" H 1715 2330 50  0001 C CNN
+	1    1715 2330
+	1    0    0    -1  
+$EndComp
+Text GLabel 1060 1915 2    50   Input ~ 0
+LED_NTC1
+Connection ~ 3295 5055
+Connection ~ 3295 4755
+Wire Wire Line
+	3610 5055 3920 5055
+Connection ~ 3610 5055
+Wire Wire Line
+	3295 5055 3610 5055
+Wire Wire Line
+	3610 4755 3920 4755
+Connection ~ 3610 4755
+Wire Wire Line
+	3295 4755 3610 4755
+$Comp
+L Device:LED D15
+U 1 1 5E0D284B
+P 3610 4905
+F 0 "D15" H 3603 5121 50  0000 C CNN
+F 1 "LED" H 3603 5030 50  0000 C CNN
+F 2 "lt_foots:LED_Cree-J-Series" H 3610 4905 50  0001 C CNN
+F 3 "~" H 3610 4905 50  0001 C CNN
+	1    3610 4905
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D16
+U 1 1 5E0D282D
+P 3920 4905
+F 0 "D16" H 3913 5121 50  0000 C CNN
+F 1 "LED" H 3913 5030 50  0000 C CNN
+F 2 "lt_foots:LED_Cree-J-Series" H 3920 4905 50  0001 C CNN
+F 3 "~" H 3920 4905 50  0001 C CNN
+	1    3920 4905
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1725 3785 2245 3785
+Wire Wire Line
+	1725 3485 2245 3485
+$Comp
+L Device:LED_PAD D4
+U 1 1 5E36FBB7
+P 3295 3635
+F 0 "D4" H 3295 3915 50  0000 C CNN
+F 1 "LED_PAD" H 3295 3824 50  0000 C CNN
+F 2 "LED_SMD:LED_Cree-XP-G" H 3295 3635 50  0001 C CNN
+F 3 "~" H 3295 3635 50  0001 C CNN
+	1    3295 3635
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED_PAD D3
+U 1 1 5E36FBAD
+P 2795 3635
+F 0 "D3" H 2795 3915 50  0000 C CNN
+F 1 "LED_PAD" H 2795 3824 50  0000 C CNN
+F 2 "LED_SMD:LED_Cree-XP-G" H 2795 3635 50  0001 C CNN
+F 3 "~" H 2795 3635 50  0001 C CNN
+	1    2795 3635
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED_PAD D2
+U 1 1 5E36D484
+P 2245 3635
+F 0 "D2" H 2245 3915 50  0000 C CNN
+F 1 "LED_PAD" H 2245 3824 50  0000 C CNN
+F 2 "LED_SMD:LED_Cree-XP-G" H 2245 3635 50  0001 C CNN
+F 3 "~" H 2245 3635 50  0001 C CNN
+	1    2245 3635
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED_PAD D1
+U 1 1 5E36CF9A
+P 1725 3635
+F 0 "D1" H 1725 3915 50  0000 C CNN
+F 1 "LED_PAD" H 1725 3824 50  0000 C CNN
+F 2 "LED_SMD:LED_Cree-XP-G" H 1725 3635 50  0001 C CNN
+F 3 "~" H 1725 3635 50  0001 C CNN
+	1    1725 3635
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1725 3485
+Connection ~ 2245 3485
+Wire Wire Line
+	2245 3485 2795 3485
+Connection ~ 2245 3785
+Wire Wire Line
+	2245 3785 2795 3785
+Connection ~ 2795 3485
+Wire Wire Line
+	2795 3485 3295 3485
+Connection ~ 2795 3785
+Wire Wire Line
+	2795 3785 3295 3785
+Text GLabel 3495 3635 2    50   Input ~ 0
+PAD
+Text GLabel 2995 3635 2    50   Input ~ 0
+PAD
+Text GLabel 2445 3635 2    50   Input ~ 0
+PAD
+Text GLabel 1925 3635 2    50   Input ~ 0
+PAD
+Text GLabel 925  2635 0    50   Input ~ 0
+PAD
+$EndSCHEMATC
